@@ -6,7 +6,7 @@ const CardCustom3 = () => {
   return (
     <div className="max-w-[986px] relative mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       {/* Card Header */}
-      <Image src={dot} className='absolute right-[18px] top-[18px]'/>
+      <Image alt="dot" src={dot} className='absolute right-[18px] top-[18px]'/>
       <div className="p-4">
         <h2 className="text-3xl font-bold text-gray-800">
           Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et

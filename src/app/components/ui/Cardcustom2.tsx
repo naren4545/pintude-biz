@@ -8,7 +8,7 @@ const CardCustom2 = () => {
     >
       
 
-      <Image src={dot} className='absolute right-[18px] top-[18px]'/>
+      <Image alt="dot" src={dot} className='absolute right-[18px] top-[18px]'/>
       <div className="">
         
         <div className=" text-center">

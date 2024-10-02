@@ -81,7 +81,7 @@ export default function SectionOne() {
           <div className="col-span-12 lg:col-span-3">
             <div className="flex flex-col gap-12 items-center h-full justify-center">
               <p className="">
-                <Button href="/">
+                <Button className="" href="/">
                   <svg
                     width="24"
                     className="inline mr-2"
@@ -99,7 +99,7 @@ export default function SectionOne() {
               </p>
 
               <p>
-                <Button href="/">
+                <Button className="" href="/">
                   <svg
                     width="24"
                     className="inline mr-2"

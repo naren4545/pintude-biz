@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import CardCustom3 from '../ui/CardCustom3';
-import CardCustom2 from '../ui/CardCustom2';
+
 import CardCustom1 from '../ui/CardCustom';
 
 const images = [
@@ -39,7 +39,7 @@ const CustomSlider = () => {
   };
 
   
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     if (!isAnimating) {
       setIsAnimating(true);
       setTimeout(() => {

@@ -5,7 +5,7 @@ import Button from '../ui/Button'
 export default function BuisnessCard() {
   return (
     <section>
-      <div className="max-w-[1440px] p-3">
+      <div className="max-w-[1440px]  mx-auto p-3">
 <div className="flex flex-col lg:flex-row">
 
 <div className="w-full lg:w-[60%]">

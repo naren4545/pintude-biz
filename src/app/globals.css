@@ -1,27 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #171717;
+  --foreground: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #FFFFFF;
+  --foreground: #000;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+header .button{
+
+
+  background-color:#13A8DA;
+  color:#FFFFFF;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  padding: 15px 25px;
+  border-radius: 41px;
+}
+.hero{
+
+ 
+  background: -webkit-linear-gradient(to top, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #ECFAFE 44%, #ffffff 81%, #ffffff 100%);
+  box-shadow: 0px 12px 12px 0px #00000040;
+padding: 40px 0px;
+
+
+}
+p{
+
+  font-size: 24px;
+  line-height: 36px;
+}
+.font-m{
+
+
+  font-family: "Merriweather", serif;
+}
+hr{
+ border: 1px solid #D9D9D9
+}
+body {
+ 
+ 
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto !important;
 }

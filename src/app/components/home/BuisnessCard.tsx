@@ -13,7 +13,7 @@ export default function BuisnessCard() {
 <Image src={Bcard} alt='buisess card'/>
 
 </div>
-<div className="w-full lg:w-[40%] mt-7 lg:mt-0 lg:max-w-[390px]">
+<div className="w-full lg:w-[40%] mt-7 lg:mt-0 max-w-[390px]">
 
     <h2 className='font-m text-[40px] font-bold leading-[50px]'>Download Your <span className='text-[#13A8DA]'>Digital</span> Business 
     Card</h2>

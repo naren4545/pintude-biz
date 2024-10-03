@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className='bg-[#1BABDB]'>
       <div className='max-w-[1440px] mx-auto px-4 pt-9 text-white'>
-<div className='max-w-[1200px] mb-9 mx-auto px-7 py-9 bg-[#00506B26]'>
+<div className='max-w-[1200px] mb-9 mx-auto px-7 py-12 bg-[#00506B26]'>
 <div className='flex flex-col lg:flex-row items-center'>
     <div className='lg:w-[70%] w-full'>
         <h2 className='font-semibold text-4xl mb-4'>Tell your family and friends about biz_name</h2>

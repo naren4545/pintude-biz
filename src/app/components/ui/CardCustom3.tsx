@@ -24,16 +24,20 @@ const CardCustom3 = () => {
       <div className="px-4 pb-4">
       
         <hr/>
-        <div className="my-4 text-center">
+        <div className="my-4 ">
           {/* Image from Next.js Image component */}
-          <Image 
+          {/* <Image 
             className="rounded-lg mx-auto"
             src={promo}
             alt="Card Image" 
             width={642} 
             height={328}
            
-          />
+            
+          /> */}
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm tempor 
+ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation 
+Read More</p>
         </div>
       </div>
     </div>

@@ -7,16 +7,16 @@
   --foreground: #FFFFFF;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #FFFFFF;
   --foreground: #000;
   }
-}
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: #000;
+  background: #FFF;
   font-family: "Roboto", sans-serif;
 }
 

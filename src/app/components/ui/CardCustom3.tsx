@@ -4,7 +4,7 @@ import promo from '../../assests/image 13.png'
 import dot from '../../assests/Vector (1).png'
 const CardCustom3 = () => {
   return (
-    <div className="max-w-[986px] relative mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="max-w-[986px] px-5 py-5 relative mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
       {/* Card Header */}
       <Image alt="dot" src={dot} className='absolute right-[18px] top-[18px]'/>
       <div className="p-4">

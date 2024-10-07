@@ -134,7 +134,7 @@ export default function SectionOne() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-3 max-w-xl mx-auto mt-7">
+        <div className="flex flex-col lg:flex-row gap-3 max-w-[590px] mx-auto mt-7">
 <div className="flex bg-[#00506B0A] p-4 justify-center items-center text-center">
 <Image src={one} alt="person"/>
 

@@ -23,11 +23,12 @@ const CardCustom = () => {
 
       {/* Card Body */}
       <div className="px-4 pb-4">
+      <hr/>
         <p className="font-light">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.
           Ut enim ad minim, qui nostrud exercitation <span className=" font-medium">Read More</span>
         </p>
-        <hr/>
+       
         <div className="my-4 text-center">
           {/* Image from Next.js Image component */}
           <Image 

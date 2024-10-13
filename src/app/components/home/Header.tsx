@@ -1,8 +1,10 @@
 'use client'
 
 import Image from 'next/image';
-
-export default function Header() {
+interface HeaderProps {
+  headerContent: string;
+}
+export default function Header({headerContent}: HeaderProps) {
  
   
 
@@ -19,7 +21,7 @@ export default function Header() {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-[70%]">
               <div className="logo">
-                <p className='lg:text-2xl text-xs pb-6 p-4 bg-[#13A8DA] mb-5 mx-auto lg:mx-0 md:mb-0 text-white w-fit text-center lg:text-left  font-bold rounded-[10px] shadow-xl '>{"India>Goa>bardez>mapusa>biz_category>biz_name"}</p>
+                <p className='lg:text-[28px] text-xs py-7  p-4 bg-[#13A8DA]  mx-auto lg:mx-0 md:mb-0 text-white w-fit text-center lg:text-left  font-bold rounded-[10px] shadow-xl  font-p'>{headerContent}</p>
               </div>
             </div>
             <div className="w-full lg:w-[30%]">

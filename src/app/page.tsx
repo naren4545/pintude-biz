@@ -10,17 +10,9 @@ import SectionCard from "./components/home/SectionCard";
 
 import ResponsiveSlider from "./components/home/ResponsiveSlider";
 import Footer from "./components/home/Footer";
+import HomePG from "./components/home/Home";
 export default function Home() {
   return (
-    <div>
-      <Header/>
-      <SectionOne/>
-      <MapUI/>
-      <GallerySection/>
-      <BuisnessCard/>
-      <SectionCard/>
-      <ResponsiveSlider/>
-      <Footer/>
-    </div>
+    <HomePG/>
   );
 }

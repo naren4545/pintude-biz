@@ -4,7 +4,7 @@ import { useState } from "react";
 import CardCustom from "../ui/CardCustom";
 import CardCustom2 from "../ui/Cardcustom2";
 import CardCustom3 from "../ui/CardCustom3";
-import Modal from "../ui/Popup";
+
 interface Brodcast1 {
   heading: string;
   time: string;

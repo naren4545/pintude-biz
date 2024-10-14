@@ -7,30 +7,56 @@ import img from "../../assests/industrial_2134177.png";
 import img2 from "../../assests/prototype_2421341.png";
 import ContactBox from "../ui/contactBox";
 import HeroSection from "../ui/HeroSection";
-export default function SectionOne() {
+interface Contact {
+  phone: string;   // Phone number
+  email: string;   // Email address
+  website: string; // Website URL
+}
+
+interface ContactDetail {
+  weekdays: string;          // Days the business is open
+  timing: string;            // Business hours
+  isOpen: boolean;           // Status whether the business is open or closed
+  contact: Contact;          // Nested object containing contact information
+}
+
+interface HeroSection {
+  promoImg:string,
+  businessName:string,
+  Biz_Categor:string,
+  Biz_Subcategory:string,
+  businessInfo:string,
+  tags:string[],
+}
+
+// interface ContactDetail {
+//   weekdays:string,
+//   timing:"9:00 am - 7:00 pm",
+//   isOpen:false,
+//   Contact:{
+//     phone: "+91 123 456 7890",
+//     email: "demo@gmail.com",
+//     website: "www.website.com",
+
+// }
+// }
+interface SectionOneProps {
+  heroSection: HeroSection;
+  contactDetail: ContactDetail;
+}
+const SectionOne: React.FC<SectionOneProps> = ({ heroSection, contactDetail }) => {
   return (
     <section className="hero">
       <div className="max-w-[1440px] relative py-10 px-4  mx-auto ">
         
 
         <HeroSection
-        promoImg={promoImg.src}
-          businessName="Business Name"
-          Biz_Category="Biz_Category"
-          Biz_Subcategory="Biz_Subcategory"
-          businessInfo="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        tags={[
-          'tag1',
-          'tag2',
-          'tag3',
-          'tag4',
-          'tag5',
-          'tag6',
-          'tag7',
-          'tag8',
-          'tag9',
-          'tag10'
-        ]}
+        promoImg={heroSection.promoImg}
+          businessName={heroSection.businessName}
+          Biz_Category={heroSection.Biz_Categor}
+          Biz_Subcategory={heroSection.Biz_Subcategory}
+          businessInfo={heroSection.businessInfo}
+            tags={heroSection.tags}
         />
         <div className="flex flex-col lg:flex-row gap-3 max-w-[590px] mx-auto mt-7">
           <div className="flex bg-[#00506B0A] p-4 justify-center items-center text-center">
@@ -56,14 +82,10 @@ export default function SectionOne() {
 
         <div className="max-w-[1170px] mx-auto my-10">
           <ContactBox
-            weekdays="Monday - Friday"
-            timing="9:00 am - 7:00 pm"
-            isOpen={true}
-            Contact={{
-              phone: "+91 123 456 7890",
-              email: "demo@gmail.com",
-              website: "www.website.com",
-            }}
+            weekdays={contactDetail.weekdays}
+            timing={contactDetail.timing}
+            isOpen={contactDetail.isOpen}
+            Contact={contactDetail.contact}
             addres="1901 Thornridge Cir. Shiloh, 
 Hawaii 81063"
           />
@@ -72,3 +94,5 @@ Hawaii 81063"
     </section>
   );
 }
+
+export default SectionOne

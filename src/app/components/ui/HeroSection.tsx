@@ -6,12 +6,12 @@ import img from '../../assests/industrial_2134177.png';
 import img2 from '../../assests/prototype_2421341.png';
 
 interface HeroSectionProps {
-    promoImg: string;                // Assuming it's a URL or path to an image
-    businessName: string;            // Name of the business
-    Biz_Category: string;            // Business category
-    Biz_Subcategory: string;         // Business subcategory
-    businessInfo: string;            // Business description or info
-    tags: string[];                  // Array of tags (assuming it's an array of strings)
+    promoImg: string;              
+    businessName: string;            
+    Biz_Category: string;           
+    Biz_Subcategory: string;         
+    businessInfo: string;            
+    tags: string[];                  
   }
 
   export default function HeroSection({
@@ -59,7 +59,7 @@ interface HeroSectionProps {
                 <div className="grid lg:grid-cols-5 grid-cols-3 gap-4 place-content-center">
                   
                   
-                {tags.map(tag =><div key={tag} className="bg-[#0C68870A] text-center rounded-[56px] px-6 py-3 shadow-md">
+                {tags.map(tag =><div key={tag} className="bg-[#0C68870A] text-2xl font-medium text-center rounded-[56px] px-6 py-3 shadow-md">
                     {tag}
                   </div>)  
                   }

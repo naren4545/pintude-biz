@@ -3,7 +3,11 @@ import Button from '../ui/Button'
 import logo from '../../assests/Group 4.png'
 import logo2 from '../../assests/Group 361.png'
 import Image from 'next/image'
-export default function Footer() {
+
+interface footer {
+ biz_name:string;
+}
+export default function Footer({biz_name}:footer) {
   return (
     <footer className='bg-[#1BABDB]'>
       <div className='max-w-[1440px] mx-auto px-4 pt-9 text-white'>

@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import Bcard from '../../assests/WhatsApp Image 2024-09-25 at 23.21.13_906379e8 1.png'
 import Button from '../ui/Button'
-
-export default function BuisnessCard() {
+interface BuisnessCardProps {
+  digitalBuisnessCard: string;
+  onClick:string
+}
+export default function BuisnessCard({digitalBuisnessCard,onClick}: BuisnessCardProps) {
   return (
     <section>
       <div className="max-w-[1440px]  mx-auto p-3">

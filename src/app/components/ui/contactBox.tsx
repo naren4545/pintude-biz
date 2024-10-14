@@ -8,7 +8,7 @@ interface ContactBoxProps {
     weekdays: string;
     timing: string;
     Contact: ContactInfo ;
-    addres: string; // Should this be `address`? If so, correct it.
+    addres: string; 
     isOpen: boolean;
   }
   
@@ -17,7 +17,7 @@ interface ContactBoxProps {
     weekdays,
     timing,
     Contact,
-    addres, // Or address if it's a typo
+    addres, 
     isOpen,
   }: ContactBoxProps) {
   return (
@@ -36,7 +36,7 @@ Timings</p>
 {timing}
 </p>
 
-{isOpen?<ul className="text-base list-disc text-[#006623]"><li>Open</li></ul>:<ul className="text-base list-disc text-red"><li>close</li></ul>}
+{isOpen?<ul className="text-base list-disc text-[#006623]"><li>Open</li></ul>:<ul className="text-base list-disc text-red-900"><li>close</li></ul>}
 
 
 </div>

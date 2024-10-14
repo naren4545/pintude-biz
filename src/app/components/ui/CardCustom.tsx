@@ -5,7 +5,7 @@ import promo from "../../assests/image 13.png";
 import dot from "../../assests/Vector (1).png";
 import { useState } from "react";
 import ReadMore from "./ReadMore";
-import Modal from "./Popup"; // This is your Modal component
+import Modal from "./Modal"; // This is your Modal component
 
 interface Brodcast {
   heading: string;

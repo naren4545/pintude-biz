@@ -33,7 +33,7 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
         className="max-w-[986px] relative bg=[] mx-auto bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
         onClick={handleCardClick} 
       >
-        <Image alt="dot" src={dot} className="absolute right-[18px] top-[18px]" />
+        <img alt="dot" src={dot.src} className="absolute right-[18px] top-[18px]" />
         <div className="">
           <div className="text-center">
             

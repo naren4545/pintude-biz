@@ -6,9 +6,9 @@ import { useState } from "react";
 import Modal from "./Modal";
 
 interface Brodcast2 {
-  heading: string;
-  time: string;
-  imgURL: string;
+  title: string;
+ date: string;
+  image: string;
 }
 
 interface CardCustomProps {
@@ -29,7 +29,7 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
   return (
     <>
       <div
-        className="max-w-[986px] relative bg=[] mx-auto bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
+        className="max-w-[986px] m-4 relative bg=[] mx-auto bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
         onClick={handleCardClick}
       >
         <img
@@ -49,7 +49,7 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
 
           <div className="p-4 absolute top-[33px] left-[11]">
             <h2 className="text-3xl font-bold text-white">
-              {brodcast.heading}
+              {brodcast. title}
             </h2>
             <div className="flex items-center mt-2 text-sm text-white">
               <svg
@@ -64,7 +64,7 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
                   fill="white"
                 />
               </svg>
-              <p className="text-xl font-medium text-white">{brodcast.time}</p>
+              <p className="text-xl font-medium text-white">{brodcast.date}</p>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
 
               <div className="p-4 absolute top-[33px] left-[11]">
                 <h2 className="text-3xl font-bold text-white">
-                  {brodcast.heading}
+                  {brodcast.title}
                 </h2>
                 <div className="flex items-center mt-2 text-sm text-white">
                   <svg
@@ -112,7 +112,7 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
                     />
                   </svg>
                   <p className="text-xl font-medium text-white">
-                    {brodcast.time}
+                    {brodcast.date}
                   </p>
                 </div>
               </div>

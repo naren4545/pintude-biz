@@ -11,7 +11,7 @@ interface Broadcast {
 
 const CardCustom3 = ({ title, date, content }: Broadcast) => {
   return (
-    <div className="max-w-[986px] px-5 py-5 relative mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+    <div className="max-w-[986px] m-4 px-5 py-5 relative mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
     
       <Image alt="dot" src={dot} className='absolute right-[18px] top-[18px]'/>
       <div className="p-4">

@@ -26,7 +26,7 @@ body {
     text-wrap: balance;
   }
 }
-header .button{
+.call.button{
 
 
   background-color:#FFF;
@@ -75,7 +75,10 @@ dialog {
 dialog::backdrop {
   background: rgba(0, 0, 0, 0.5);
 }
-
+.slick-track {
+  display: flex;
+  align-items: center;
+}
 .font-m{
 
 

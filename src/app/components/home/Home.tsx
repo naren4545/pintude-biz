@@ -17,7 +17,7 @@ import Image3 from"../../assests/Rectangle5.png";
 import Image4 from "../../assests/Rectangle6.png";
 import Bcard from '../../assests/WhatsApp Image 2024-09-25 at 23.21.13_906379e8 1.png'
 
-
+import promo from '../../assests/image 13.png'
 export default function HomePG() {
 
 const data={
@@ -84,19 +84,124 @@ brodcast2:{
       date: "Sep 27, 2024 09:42 AM IST",
       content:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation.",
+        image:promo.src
     },
+    {
+      title: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et",
+      date: "Sep 27, 2024 09:42 AM IST",
+      content:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation.",
+        image:promo.src
+    },
+  
     {
       title: "Second Slide Example Title",
       date: "Sep 28, 2024 09:42 AM IST",
-      content:
-        "Second slide content here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      content:"",
+      image:promo.src
     },
     {
       title: "Third Slide Example Title",
       date: "Sep 29, 2024 09:42 AM IST",
       content:
         "Third slide content here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    },
+        image:"",
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et",
+        date: "Sep 27, 2024 09:42 AM IST",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation.",
+          image:promo.src
+      },
+      {
+        title: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et",
+        date: "Sep 27, 2024 09:42 AM IST",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation.",
+          image:promo.src
+      },
+    
+      {
+        title: "Second Slide Example Title",
+        date: "Sep 28, 2024 09:42 AM IST",
+        content:"",
+        image:promo.src
+      },
+      {
+        title: "Third Slide Example Title",
+        date: "Sep 29, 2024 09:42 AM IST",
+        content:
+          "Third slide content here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+          image:"",
+        },
+        {
+          title: "Second Slide Example Title",
+          date: "Sep 28, 2024 09:42 AM IST",
+          content:"",
+          image:promo.src
+        },{
+          title: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et",
+          date: "Sep 27, 2024 09:42 AM IST",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation.",
+            image:promo.src
+        },
+        {
+          title: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et",
+          date: "Sep 27, 2024 09:42 AM IST",
+          content:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation.",
+            image:promo.src
+        },
+      
+        {
+          title: "Second Slide Example Title",
+          date: "Sep 28, 2024 09:42 AM IST",
+          content:"",
+          image:promo.src
+        },
+        {
+          title: "Third Slide Example Title",
+          date: "Sep 29, 2024 09:42 AM IST",
+          content:
+            "Third slide content here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            image:"",
+          },
+          {
+            title: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et",
+            date: "Sep 27, 2024 09:42 AM IST",
+            content:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation.",
+              image:promo.src
+          },
+          {
+            title: "Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor incididunt ut labore et",
+            date: "Sep 27, 2024 09:42 AM IST",
+            content:
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim, qui nostrud exercitation.",
+              image:promo.src
+          },
+        
+          {
+            title: "Second Slide Example Title",
+            date: "Sep 28, 2024 09:42 AM IST",
+            content:"",
+            image:promo.src
+          },
+          {
+            title: "Third Slide Example Title",
+            date: "Sep 29, 2024 09:42 AM IST",
+            content:
+              "Third slide content here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              image:"",
+            },
+            {
+              title: "Second Slide Example Title",
+              date: "Sep 28, 2024 09:42 AM IST",
+              content:"",
+              image:promo.src
+            }
   ]
 
 }
@@ -108,7 +213,7 @@ brodcast2:{
       <MapUI map={data.MapUIsrc}/>
       <GallerySection images={data.GallerySectionImges}/>
       <BuisnessCard digitalBuisnessCard={data.BuisnessCard.digitalBuisnessCard} onClick={data.BuisnessCard.onclick}/>
-      <SectionCard bizName={data.heroSectionData.businessName} Brodcast2={data.brodcast2}  Brodcast1={data.brodcast1} />
+      {/* <SectionCard bizName={data.heroSectionData.businessName} Brodcast2={data.brodcast2}  Brodcast1={data.brodcast1} /> */}
       <ResponsiveSlider broadcasts={data.broadcast3}/>
       <Footer biz_name={data.heroSectionData.businessName}/>
     </div>

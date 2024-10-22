@@ -57,6 +57,7 @@ const SectionOne: React.FC<SectionOneProps> = ({ heroSection, contactDetail }) =
           Biz_Subcategory={heroSection.Biz_Subcategory}
           businessInfo={heroSection.businessInfo}
             tags={heroSection.tags}
+            onClick={contactDetail.contact.phone}
         />
         <div className="flex flex-col lg:flex-row gap-3 max-w-[590px] mx-auto mt-7">
           <div className="flex bg-[#00506B0A] p-4 justify-center items-center text-center">

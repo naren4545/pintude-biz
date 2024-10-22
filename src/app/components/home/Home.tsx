@@ -202,7 +202,8 @@ brodcast2:{
               content:"",
               image:promo.src
             }
-  ]
+  ],
+  broad:[]
 
 }
 
@@ -214,7 +215,7 @@ brodcast2:{
       <GallerySection images={data.GallerySectionImges}/>
       <BuisnessCard digitalBuisnessCard={data.BuisnessCard.digitalBuisnessCard} onClick={data.BuisnessCard.onclick}/>
       {/* <SectionCard bizName={data.heroSectionData.businessName} Brodcast2={data.brodcast2}  Brodcast1={data.brodcast1} /> */}
-      <ResponsiveSlider broadcasts={data.broadcast3}/>
+      <ResponsiveSlider broadcasts={data.broad} bizName={data.heroSectionData.businessName}/>
       <Footer biz_name={data.heroSectionData.businessName}/>
     </div>
   );

@@ -7,6 +7,7 @@ import img from "../../assests/industrial_2134177.png";
 import img2 from "../../assests/prototype_2421341.png";
 import ContactBox from "../ui/contactBox";
 import HeroSection from "../ui/HeroSection";
+import './sectionOne.css'
 interface Contact {
   phone: string;   // Phone number
   email: string;   // Email address

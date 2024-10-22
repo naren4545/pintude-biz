@@ -6,7 +6,7 @@ import GallerySection from "./GalerySec";
 import BuisnessCard from "./BuisnessCard";
 import ResponsiveCard from "../ui/CardCustom";
 import CardCustom2 from "../ui/Cardcustom2";
-import SectionCard from "./SectionCard";
+// import SectionCard from "./SectionCard";
 import map from '../../assests/map.png'
 import ResponsiveSlider from "./ResponsiveSlider";
 import Footer from "./Footer";

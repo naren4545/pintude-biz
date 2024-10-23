@@ -1,7 +1,7 @@
 import Image from "next/image";
-import one from "../../assests/1.png";
-import two from "../../assests/2.png";
-import promoImg from "../..//assests/Group 228.png";
+import one from "../../assests/Verified.png";
+import two from "../../assests/Location.png";
+import promoImg from "../..//assests/bizImg.png";
 import Button from "../ui/Button";
 import img from "../../assests/industrial_2134177.png";
 import img2 from "../../assests/prototype_2421341.png";

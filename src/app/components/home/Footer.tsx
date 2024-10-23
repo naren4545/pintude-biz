@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '../ui/Button'
-import logo from '../../assests/Group 4.png'
-import logo2 from '../../assests/Group 361.png'
+import logo from '../../assests/logo2.png'
+
 import Image from 'next/image'
 
 interface footer {

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import promo from "../../assests/image 13.png";
-import dot from "../../assests/Vector (1).png";
+import dot from "../../assests/3dot.png";
 import { useState } from "react";
 import ReadMore from "./ReadMore";
 import Modal from "./Modal"; // This is your Modal component

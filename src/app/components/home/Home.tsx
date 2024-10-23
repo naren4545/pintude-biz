@@ -10,12 +10,12 @@ import CardCustom2 from "../ui/Cardcustom2";
 import map from '../../assests/map.png'
 import ResponsiveSlider from "./ResponsiveSlider";
 import Footer from "./Footer";
-import promoImg from "../..//assests/Group 228.png";
-import Image1 from "../../assests/Rectangle3.png";
-import Image2 from "../../assests/Rectangle4.png";
-import Image3 from"../../assests/Rectangle5.png";
-import Image4 from "../../assests/Rectangle6.png";
-import Bcard from '../../assests/WhatsApp Image 2024-09-25 at 23.21.13_906379e8 1.png'
+import promoImg from "../..//assests/bizImg.png";
+import Image1 from "../../assests/Business3.png";
+import Image2 from "../../assests/Business4.png";
+import Image3 from"../../assests/Business5.png";
+import Image4 from "../../assests/Business6.png";
+import Bcard from '../../assests/bizCard.png'
 
 import promo from '../../assests/image 13.png'
 export default function HomePG() {

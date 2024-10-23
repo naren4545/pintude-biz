@@ -1,7 +1,7 @@
 // components/ResponsiveCard.js
 import Image from "next/image";
 import promo from "../../assests/image 13.png";
-import dot from "../../assests/Vector (2).png";
+import dot from "../../assests/3dotw.png";
 import { useState } from "react";
 import Modal from "./Modal";
 

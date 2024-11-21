@@ -1,12 +1,10 @@
 "use client";
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import Slider from "react-slick"; // Import react-slick
 import CardCustom3 from "../ui/CardCustom3";
-
-import Image from "next/image";
 import CardCustom2 from "../ui/Cardcustom2";
 import CardCustom from "../ui/CardCustom";
-import chunkArray from "@/app/util/arrayBrodcast";
+import chunkArray from "@/utils/arrayBrodcast";
 
 interface Broadcast {
   title: string;
@@ -28,23 +26,9 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
   const b = chunkArray(broadcasts, 3); // Chunk broadcasts into groups of 3
 
   const sliderRef = useRef<any>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-  const sliderSettings = {
-    dots: false, // Enable pagination dots
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    adaptiveHeight: true,
-    
-    beforeChange: (oldIndex: number, newIndex: number) => {
-      setCurrentIndex(newIndex);
-    },
-  };
-
-
-// useEffect(() => {
+  // useEffect(() => {
   //   if (containerRef.current) {
   //     // Get the position of the element relative to the top of the viewport
   //     const elementPosition = containerRef.current.getBoundingClientRect().top;
@@ -60,6 +44,19 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
   
   //   console.log("hi");
   // }, [currentIndex]);
+
+  const sliderSettings = {
+    dots: false, // Enable pagination dots
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    adaptiveHeight: true,
+    beforeChange: (oldIndex: number, newIndex: number) => {
+      setCurrentIndex(newIndex);
+    },
+  };
 
   const goToPrevSlide = () => {
     if (sliderRef.current) {
@@ -93,12 +90,12 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
   };
 
   return (
-    <div className="relative p-4 mx-auto">
+    <div className="relative p-4 mx-auto " ref={containerRef}>
 
 <div className="mb-7">
   
-   <h2 className="font-noto lg:text-[40px] lg:leading-[50px] text-2xl font-bold text-center">Latest broadcast from {bizName}</h2>
-  <p className="text-center text-sm lg:text-2xl">Engage with your customers by scheduling special announcements or promotions.</p>
+   <h2 className="font-m text-[40px] leading-[50px] font-bold text-center">Latest broadcast from {bizName}</h2>
+  <p className="text-center">Engage with your customers by scheduling special announcements or promotions.</p>
    </div>
       
      { broadcasts.length? (<div className="overflow-hidden rounded-lg relative">
@@ -117,7 +114,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
                   return (
                     <div
                       key={idx}
-                      className="transition-transform duration-300 ease-in-out mx-3"
+                      className="transition-transform duration-300 ease-in-out"
                     >
                       {brodcastType === 3 && (
                         <CardCustom3
@@ -165,7 +162,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
                       }
                       className={`mx-1 w-8 h-8 rounded-[6px] ${
                         currentIndex === paginationIndex * paginationGroupSize + index
-                          ? "bg-[#F55256] text-white"
+                          ? "bg-[#E78B01] text-white"
                           : "shadow-[1px_1px_6px_0px_rgba(0,0,0,0.25)]"
                       }`}
                     >

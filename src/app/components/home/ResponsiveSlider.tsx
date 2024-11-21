@@ -36,6 +36,8 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    adaptiveHeight: true,
+    
     beforeChange: (oldIndex: number, newIndex: number) => {
       setCurrentIndex(newIndex);
     },
@@ -77,8 +79,8 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
 
 <div className="mb-7">
   
-   <h2 className="font-m text-[40px] leading-[50px] font-bold text-center">Latest broadcast from {bizName}</h2>
-  <p className="text-center">Engage with your customers by scheduling special announcements or promotions.</p>
+   <h2 className="font-m lg:text-[40px] lg:leading-[50px] text-2xl font-bold text-center">Latest broadcast from {bizName}</h2>
+  <p className="text-center text-sm lg:text-2xl">Engage with your customers by scheduling special announcements or promotions.</p>
    </div>
       
      { broadcasts.length? (<div className="overflow-hidden rounded-lg relative">
@@ -97,7 +99,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
                   return (
                     <div
                       key={idx}
-                      className="transition-transform duration-300 ease-in-out"
+                      className="transition-transform duration-300 ease-in-out mx-3"
                     >
                       {brodcastType === 3 && (
                         <CardCustom3
@@ -145,7 +147,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
                       }
                       className={`mx-1 w-8 h-8 rounded-[6px] ${
                         currentIndex === paginationIndex * paginationGroupSize + index
-                          ? "bg-[#E78B01] text-white"
+                          ? "bg-[#F55256] text-white"
                           : "shadow-[1px_1px_6px_0px_rgba(0,0,0,0.25)]"
                       }`}
                     >

@@ -7,14 +7,14 @@ interface HeaderProps {
 }
 export default function Header({headerContent,onClick}: HeaderProps) {
  
-  
+  const text_array = headerContent.split('>');
 
-
+console.log(text_array)
   return (
     <header
       className={
        
-        " max-w-[1440px] relative text-center  mx-auto lg:z-10 w-full lg:bg-transparent "
+        " max-w-[1440px] md:py-10 py-5 relative text-center  mx-auto lg:z-10 w-full lg:bg-transparent "
       }
     >
       <div className="header-wrapper">
@@ -22,10 +22,10 @@ export default function Header({headerContent,onClick}: HeaderProps) {
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-[70%]">
               <div className="logo">
-                <p className='lg:text-[28px] lg:mb-0 mb-5 text-xs py-7  p-4 bg-[#13A8DA]  mx-auto lg:mx-0 md:mb-0 text-white w-fit text-center lg:text-left  font-bold rounded-[10px] shadow-xl  font-p'>{headerContent}</p>
+                <p className='md:text-2xl lg:mb-0  text-[10px] text-left border-[#FF5E62] border-b-2   lg:mx-0 md:mb-0  lg:text-left  font-normal w-fit pb-4 '>{text_array.map((text, index) => <span className={`${index===text_array.length - 1 ? 'text-[#FF5E62] font-medium' : ''} ${index===0?'font-medium':""}`} key={index}>{`${text}${ index !== text_array.length - 1 ? ' > ' : '' }`}</span>)}</p>
               </div>
             </div>
-            <div className="w-full lg:w-[30%]">
+            {/* <div className="w-full lg:w-[30%]">
               <div className="cta  md:text-center hidden md:block md:p-4 lg:text-right">
                 <a className="cursor-pointer call button py-3 px-8 text-[#13A8DA] border-[#13A8DA] border-[3px]  font-bold text-2xl  rounded-[41px]  inline-block " href={"tel:"+onClick}>
                 <svg className='inline mr-3' width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,7 +36,7 @@ export default function Header({headerContent,onClick}: HeaderProps) {
                 </a>
                 
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -29,13 +29,13 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
   return (
     <>
       <div
-        className="max-w-[986px] m-4 relative bg=[] mx-auto bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer"
+        className="max-w-[986px] m-4 relative bg=[] mx-auto bg-white  shadow-lg rounded-lg overflow-hidden cursor-pointer"
         onClick={handleCardClick}
       >
         <img
           alt="dot"
           src={dot.src}
-          className="absolute right-[18px] top-[18px]"
+          className="absolute  right-[18px] top-[18px]"
         />
         <div className="">
           <div className="text-center">
@@ -47,13 +47,14 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
             />
           </div>
 
-          <div className="p-4 absolute top-[33px] left-[11]">
-            <h2 className="text-3xl font-bold text-white">
+          <div className="p-4 w-full absolute bg-gradient-to-t from-black to-transparent lg:bottom-0 bottom-0 pb-5 left-[11]">
+            <h2 className="lg:text-3xl text-base italic font-bold text-white">
               {brodcast. title}
             </h2>
             <div className="flex items-center mt-2 text-sm text-white">
               <svg
                 width="24"
+                className="mr-2"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
@@ -64,7 +65,7 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
                   fill="white"
                 />
               </svg>
-              <p className="text-xl font-medium text-white">{brodcast.date}</p>
+              <p className="lg:text-xl text-sm font-medium text-white">{brodcast.date}</p>
             </div>
           </div>
         </div>

@@ -4,7 +4,8 @@ import Button from './Button'
 import Image from 'next/image'
 import img from '../../assests/industrial_2134177.png';
 import img2 from '../../assests/prototype_2421341.png';
-
+import one from "../../assests/Verified.svg";
+import two from "../../assests/Location.svg";
 interface HeroSectionProps {
     promoImg: string;              
     businessName: string;            
@@ -28,19 +29,20 @@ interface HeroSectionProps {
   console.log(tags)
   return (
     <div className="grid grid-cols-12 gap-4">
-          <div className="col-span-12 lg:col-span-3 text-center lg:text-left">
+          <div className="lg:col-span-4 col-span-5  text-center lg:text-left">
             <img src={promoImg} className="lg:mx-0 mx-auto" alt="buisness image" />
           </div>
-          <div className="col-span-12 lg:col-span-6">
+          <div className="lg:col-span-6 col-span-7 ">
             <div>
-              <h1 className="text-5xl">
-                {businessName}{" "}
+              <h1 className="md:text-5xl pb-6 text-xl font-semibold flex justify-between">
+                {businessName}
                 <span>
                   <svg
-                    className="inline"
+                    className="inline md:w-auto w-5"
                     width="34"
                     height="32"
                     viewBox="0 0 34 32"
+                    
                     fill="none"
                   >
                     <path
@@ -50,27 +52,28 @@ interface HeroSectionProps {
                   </svg>
                 </span>{" "}
               </h1>
-              <p className="text-base font-medium mb-3"><Image src={img} className="mr-2 inline" alt="biz-category"/>{Biz_Category}</p>
-              <p className="text-base  font-medium mb-6"><Image src={img2} className="mr-2 inline" alt="Biz_Subcategory"/>{Biz_Subcategory}</p>
-
-              <p>
+              <p className="lg:text-base text-sm font-medium mb-3"><Image src={img} className="mr-2 inline lg:w-auto w-5" alt="biz-category"/>{Biz_Category}</p>
+              <p className="lg:text-base text-sm  font-medium mb-6"><Image src={img2} className="mr-2 inline lg:w-auto w-5" alt="Biz_Subcategory"/>{Biz_Subcategory}</p>
+<div className='lg:block hidden'>
+              <p className='pb-5 text-2xl'>
                {businessInfo}
               </p>
              
-              <div className="bg-[#00506B0A] p-4 rounded-xl">
+              <div className="shadow-xl p-4 rounded-xl my-6">
               <div className="flex flex-wrap justify-center gap-4">
   {tags.map((tag) => (
     <div
       key={tag}
-      className="lg:w-[18%] md:w-[22%] w-[45%] bg-[#0C68870A] text-2xl font-medium text-center rounded-[56px] px-6 py-3 shadow-md"
+      className=" bg-[#F8F9DE] border-[#DCE35B] border-[1px] text-2xl font-medium text-center rounded-[10PX] px-6 py-1 shadow-md"
     >
       {tag}
     </div>
   ))}
+  </div>
 </div>
 <div className="cta  md:text-center block md:hidden md:p-4 lg:text-right">
                 <a className="cursor-pointer rounded-[41px] my-5  py-3 px-8 text-[#13A8DA] border-[#13A8DA] border-[3px] font-bold text-2xl  inline-block " href={"tel:"+onClick}>
-                <svg className='inline mr-3' width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className='inline mr-3 md:w-auto w-4' width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.80006 0.700719L4.73706 0.116719C5.37634 -0.0757149 6.06379 -0.0290248 6.67117 0.248079C7.27856 0.525184 7.7644 1.01378 8.03806 1.62272L9.39606 4.64272C9.63176 5.16664 9.69746 5.75123 9.58393 6.31439C9.4704 6.87756 9.18334 7.39103 8.76306 7.78272L6.69606 9.70872C6.41906 9.97172 6.62906 10.9967 7.64106 12.7507C8.65406 14.5057 9.43706 15.1997 9.79806 15.0917L12.5061 14.2637C13.055 14.0958 13.6427 14.1039 14.1868 14.2868C14.7308 14.4697 15.2041 14.8183 15.5401 15.2837L17.4701 17.9587C17.8599 18.4989 18.0404 19.1622 17.978 19.8254C17.9157 20.4886 17.6147 21.1067 17.1311 21.5647L15.6391 22.9777C15.1574 23.4338 14.5634 23.754 13.9176 23.9057C13.2718 24.0573 12.5974 24.0349 11.9631 23.8407C8.83706 22.8837 5.94206 20.0437 3.23906 15.3607C0.530064 10.6707 -0.492936 6.71472 0.220064 3.48272C0.363869 2.83147 0.678754 2.23036 1.13226 1.74135C1.58577 1.25233 2.16148 0.893114 2.80006 0.700719Z" fill="#13A8DA"/>
 </svg>
 
@@ -80,14 +83,62 @@ interface HeroSectionProps {
 
               </div>
             </div>
+
+
+            <div className="flex flex-col lg:flex-row gap-3 max-w-[190px]  mt-7 lg:hidden ">
+          <div className="flex border-[#F55256] rounded-lg  border-2 gap-4 p-3 justify-center items-center text-center">
+            <Image className='w-6' src={one} alt="person" />
+
+            <p className="text-[#F55256] text-xs font-semibold">
+              Verified Business <br />
+              Profile
+            </p>
           </div>
-          <div className="col-span-12 lg:col-span-3">
-            <div className="flex flex-col gap-12 items-center h-full justify-center">
+
+          <div className="flex justify-center gap-4 border-[#F55256] rounded-lg border-2 p-3 items-center text-center">
+            <Image className='w-6' src={two} alt="location" />
+<div>
+            <p className="text-[#E78B01] text-[8px] leading-2 font-semibold">
+              Verify Your Location and</p>
+              <p className="text-[#E78B01] leading-2 text-[8px] font-semibold">
+              Earn This Badge Now! </p>
+             <p className='text-[8px] text-[#E78B01]  leading-2'> <span className="underline font-bold">Verify Now</span>
+            </p>
+            </div>
+          </div>
+        </div>
+
+
+          </div>
+          <div className="col-span-12 lg:col-span-2 pt-9">
+
+
+          <div className='lg:hidden block'>
+              <p className='pb-5 text-sm'>
+               {businessInfo}
+              </p>
+             
+              <div className="shadow-xl p-4 rounded-xl mb-5">
+              <div className="flex flex-wrap justify-center md:gap-4 gap-2">
+  {tags.map((tag) => (
+    <div
+      key={tag}
+      className=" bg-[#F8F9DE] border-[#DCE35B] border-[1px] md:text-2xl text-sm font-medium text-center rounded-[10px] px-6 py-1 shadow-md"
+    >
+      {tag}
+    </div>
+  ))}
+  </div>
+</div>
+
+
+              </div>
+            <div className="flex lg:flex-col md:gap-6 gap-3 items-center  justify-center">
               <p className="">
                 <Button className="" href="/">
                   <svg
                     width="24"
-                    className="inline mr-2"
+                    className="inline mr-2 md:w-auto w-4"
                     height="23"
                     viewBox="0 0 24 23"
                     fill="none"
@@ -105,7 +156,7 @@ interface HeroSectionProps {
                 <Button className="" href="/">
                   <svg
                     width="24"
-                    className="inline mr-2"
+                    className="inline mr-2 md:w-auto w-4"
                     height="23"
                     viewBox="0 0 24 23"
                     fill="none"
@@ -124,7 +175,7 @@ interface HeroSectionProps {
 
               <p>
                 <Button className="" href="/">
-                <svg width="24"   className="inline mr-2" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="24"   className="inline mr-2 md:w-auto w-4" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12 7.5C12 7.17917 11.7375 6.91667 11.4167 6.91667H8.395L8.79167 5.06167V4.9275C8.79167 4.74667 8.71583 4.58333 8.59917 4.46083L8.13833 4L5.25667 6.88167C5.09917 7.03917 5 7.26083 5 7.5V11.2917C5 11.7758 5.39083 12.1667 5.875 12.1667H9.8125C10.1742 12.1667 10.4833 11.945 10.6175 11.6358L11.9358 8.55C11.9767 8.45083 12 8.34 12 8.22917V7.5ZM10.8333 8.15917L9.62 11H6.16667V7.6225L7.2925 6.49667L6.96 8.08333H10.8333V8.15917ZM18.125 9.83333H14.1875C13.8258 9.83333 13.5167 10.055 13.3825 10.3642L12.0642 13.45C12.0233 13.5492 12 13.66 12 13.7708V14.5C12 14.8208 12.2625 15.0833 12.5833 15.0833H15.605L15.2083 16.9383V17.0783C15.2083 17.2592 15.2842 17.4167 15.4008 17.545L15.8617 18L18.7433 15.1183C18.9008 14.9608 19 14.7392 19 14.5V10.7083C19 10.2242 18.6092 9.83333 18.125 9.83333ZM17.8333 14.3775L16.7075 15.5033L17.04 13.9167H13.1667V13.8408L14.38 11H17.8333V14.3775Z" fill="white"/>
 <path d="M4.017 16.3432C4.1727 16.4996 4.292 16.6883 4.36641 16.896C4.44082 17.1037 4.46851 17.3253 4.4475 17.5449C4.34182 18.5614 4.14196 19.5658 3.8505 20.5453C5.943 20.0608 7.221 19.4997 7.8015 19.2056C8.13076 19.0389 8.50993 18.9993 8.8665 19.0946C9.88845 19.3682 10.9421 19.5054 12 19.5027C17.994 19.5027 22.5 15.2916 22.5 10.5014C22.5 5.71128 17.994 1.50021 12 1.50021C6.006 1.50021 1.5 5.71279 1.5 10.5014C1.5 12.7037 2.4255 14.747 4.017 16.3432ZM3.2775 22.2015C2.92209 22.2719 2.56554 22.3364 2.208 22.3951C1.908 22.4431 1.68 22.131 1.7985 21.852C1.93133 21.5377 2.0534 21.219 2.1645 20.8964L2.169 20.8814C2.541 19.8012 2.844 18.559 2.955 17.4024C1.1145 15.5571 0 13.1418 0 10.5014C0 4.70165 5.373 0 12 0C18.627 0 24 4.70165 24 10.5014C24 16.3012 18.627 21.0029 12 21.0029C10.8114 21.0055 9.62768 20.8512 8.4795 20.5438C7.6995 20.9384 6.021 21.657 3.2775 22.2015Z" fill="white"/>
 </svg>

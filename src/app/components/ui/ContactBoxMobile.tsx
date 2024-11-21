@@ -1,4 +1,7 @@
-import React from "react";
+"use client";
+
+import { title } from "process";
+import { useState } from "react";
 interface ContactInfo {
   phone: string;
   email: string;
@@ -11,52 +14,61 @@ interface ContactBoxProps {
   addres: string;
   isOpen: boolean;
 }
-
-export default function ContactBox({
+const ContactBoxMobile = function ({
   weekdays,
   timing,
   Contact,
   addres,
   isOpen,
 }: ContactBoxProps) {
-  return (
-    <div className=" grid-cols-1 lg:grid-cols-3 gap-4 lg:grid hidden ">
-      <div className=" lg:max-w-[293px]    py-3 px-5 shadow-[0px_0px_6px_2px_#00000040]   rounded-[5px]">
-        <svg
-          width="70"
-          height="60"
-          viewBox="0 0 70 60"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="70" height="60" rx="5" fill="#13A8DA" />
-          <path
-            d="M35 46C39.2435 46 43.3131 44.3143 46.3137 41.3137C49.3143 38.3131 51 34.2435 51 30C51 25.7565 49.3143 21.6869 46.3137 18.6863C43.3131 15.6857 39.2435 14 35 14C30.7565 14 26.6869 15.6857 23.6863 18.6863C20.6857 21.6869 19 25.7565 19 30C19 34.2435 20.6857 38.3131 23.6863 41.3137C26.6869 44.3143 30.7565 46 35 46ZM35 10C37.6264 10 40.2272 10.5173 42.6537 11.5224C45.0802 12.5275 47.285 14.0007 49.1421 15.8579C50.9993 17.715 52.4725 19.9198 53.4776 22.3463C54.4827 24.7728 55 27.3736 55 30C55 35.3043 52.8929 40.3914 49.1421 44.1421C45.3914 47.8929 40.3043 50 35 50C23.94 50 15 41 15 30C15 24.6957 17.1071 19.6086 20.8579 15.8579C24.6086 12.1071 29.6957 10 35 10ZM36 20V30.5L45 35.84L43.5 38.3L33 32V20H36Z"
-            fill="white"
-          />
-        </svg>
-        <p className="text-2xl font-medium my-5">Timings</p>
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-        <div className="flex items-center justify-around lg:justify-between text-base">
-          <p className="text-base">
-            {weekdays}
-            <br />
-            {timing}
-          </p>
+  const toggleAccordion = (index: number): void => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
 
-          {isOpen ? (
-            <ul className="text-base list-disc text-[#006623]">
-              <li>Open</li>
-            </ul>
-          ) : (
-            <ul className="text-base list-disc text-red-900">
-              <li>close</li>
-            </ul>
-          )}
+  const faqs = [
+    {
+      trigger: (
+        <span className="text-base font-medium flex gap-3 items-center">
+          <svg
+            className="inline mr-2 w-8 "
+            width="70"
+            height="60"
+            viewBox="0 0 70 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="70" height="60" rx="5" fill="#13A8DA" />
+            <path
+              d="M35 46C39.2435 46 43.3131 44.3143 46.3137 41.3137C49.3143 38.3131 51 34.2435 51 30C51 25.7565 49.3143 21.6869 46.3137 18.6863C43.3131 15.6857 39.2435 14 35 14C30.7565 14 26.6869 15.6857 23.6863 18.6863C20.6857 21.6869 19 25.7565 19 30C19 34.2435 20.6857 38.3131 23.6863 41.3137C26.6869 44.3143 30.7565 46 35 46ZM35 10C37.6264 10 40.2272 10.5173 42.6537 11.5224C45.0802 12.5275 47.285 14.0007 49.1421 15.8579C50.9993 17.715 52.4725 19.9198 53.4776 22.3463C54.4827 24.7728 55 27.3736 55 30C55 35.3043 52.8929 40.3914 49.1421 44.1421C45.3914 47.8929 40.3043 50 35 50C23.94 50 15 41 15 30C15 24.6957 17.1071 19.6086 20.8579 15.8579C24.6086 12.1071 29.6957 10 35 10ZM36 20V30.5L45 35.84L43.5 38.3L33 32V20H36Z"
+              fill="white"
+            />
+          </svg>
+          Timings
+        </span>
+      ),
+      title: "Timings",
+      answer: (
+        <div className="flex justify-between pl-9">
+        <div>
+          <p className="text-sx font-medium">Monday</p>
+          <p className="text-[10px] italic text-[#9E9D9D]">Working Hours:</p>
+          <p className="text-sm">{timing}</p>
+          </div>
+          <div>
+          <p className="text-sx font-medium invisible">Monday</p>
+          <p className="text-[10px] italic text-[#9E9D9D]">Lunch break:</p>
+          <p className="text-sm">1:00 PM - 2:30 PM</p>
+          </div>
         </div>
-      </div>
-      <div className="lg:max-w-[293px]  shadow-[0px_0px_6px_2px_#00000040]  py-3 px-5   rounded-[10px]">
-        <svg
+      ),
+    },
+    {
+      trigger:  (
+        <span className="text-base font-medium flex gap-3 items-center">
+          <svg
+          className="inline mr-2 w-8 "
           width="70"
           height="60"
           viewBox="0 0 70 60"
@@ -71,13 +83,14 @@ export default function ContactBox({
             fill="white"
           />
         </svg>
-
-        <p className="text-2xl font-medium my-5">Contact </p>
-
-        <p className="text-base mb-1">
+        Contact
+        </span>
+      ),
+      answer:(<div className="pl-9">
+        <p className="text-sm mb-1">
           <a href={"tel:" + Contact.phone}>
             <svg
-              className="inline mr-1 mt-[-3px]"
+              className="inline mr-4 mt-[-3px]"
               width="17"
               height="17"
               viewBox="0 0 17 17"
@@ -94,10 +107,10 @@ export default function ContactBox({
           </a>
         </p>
 
-        <p className="text-base mb-1">
+        <p className="text-sm mb-1">
           <a href={"mailto:" + Contact.email}>
             <svg
-              className="inline mr-1 mt-[-3px]"
+              className="inline mr-4 mt-[-3px]"
               width="14"
               height="12"
               viewBox="0 0 14 12"
@@ -113,9 +126,9 @@ export default function ContactBox({
             {Contact.email}
           </a>
         </p>
-        <p className="text-base mb-1">
+        <p className="text-sm mb-1">
           <svg
-            className="inline mr-1 mt-[-3px]"
+            className="inline mr-4 mt-[-3px]"
             width="14"
             height="14"
             viewBox="0 0 14 14"
@@ -131,25 +144,88 @@ export default function ContactBox({
 
           {Contact.website}
         </p>
-      </div>
-
-      <div className=" lg:max-w-[293px]  py-3  px-5 shadow-[0px_0px_6px_2px_#00000040] rounded-[10px]">
-        
-      <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+      </div>)
+      },
+      {
+        trigger: (
+          <span className="text-base font-medium flex gap-3 items-center">
+             <svg className="inline mr-2 w-8 " width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="70" height="60" rx="5" fill="#13A8DA"/>
 <path d="M34.9871 11.5685C34.498 11.5693 34.0269 11.7529 33.6663 12.0833L15.5903 28.0205L15.5735 28.0357C14.9919 28.5737 14.8567 29.4517 15.1495 30.0925C15.4423 30.7333 16.1287 31.1921 16.9071 31.1925H21.5679V46.5957C21.5679 47.6473 22.4831 48.4317 23.4867 48.4321H46.5123C47.5159 48.4321 48.4311 47.6473 48.4311 46.5961V31.1925H53.0923C53.8707 31.1925 54.5571 30.7341 54.8499 30.0929C55.1427 29.4521 55.0075 28.5737 54.4259 28.0357L54.4091 28.0205L36.3331 12.0833C35.966 11.7469 35.485 11.5628 34.9871 11.5685ZM34.9999 21.2833C39.2399 21.2833 42.7131 24.7473 42.7131 28.9749C42.7131 29.9929 42.5103 30.9665 42.1451 31.8581C42.0663 32.0932 41.9679 32.3212 41.8507 32.5397L35.9347 42.6077C35.3099 43.4545 34.8107 43.6409 34.0591 42.6597L28.6951 33.3873C27.7792 32.0982 27.287 30.5562 27.2867 28.9749C27.2867 24.7469 30.7599 21.2829 34.9999 21.2829M34.9999 24.8869C32.7167 24.8869 30.9007 26.6977 30.9007 28.9745C30.9007 31.2513 32.7167 33.0621 34.9999 33.0621C37.2831 33.0621 39.0991 31.2513 39.0991 28.9749C39.0991 26.6981 37.2831 24.8877 34.9999 24.8877" fill="white"/>
 </svg>
+Address
+          </span>
+        ),
+    
+        answer: (
+            <p className="text-base pl-9">{addres}</p>
+        ),
+      },
+  ];
 
-        
-        <p className="text-2xl font-medium my-5">
-          
-          Address
-        </p>
-
-        <div className="">
-          <p className="text-base">{addres}</p>
+  return (
+    <div className="mx-auto rounded-lg grid grid-cols-1 gap-5 lg:hidden ">
+      {faqs.map((faq, index) => (
+        <div key={index} className="mb-2 last:border-b-0 relative">
+          <button
+            type="button"
+            onClick={() => toggleAccordion(index)}
+            className={`w-full flex justify-between max-w-[894px]  ${
+              openIndex === index ? "" : ""
+            } border border-[#c6e7f4] rounded-[5px] shadow-lg`}
+          >
+            <div className="flex w-full">
+              <div className="w-full">
+                <p className="px-4 lg:ml-4 md:text-2xl text-sm max-w-[668px] font-medium text-left">
+                  {faq.trigger}
+                </p>
+                <div
+                  className={`overflow-hidden rounded-[5px] transition-all duration-300 ease-in-out ${
+                    openIndex === index
+                      ? "max-h-96 opacity-100 py-4 bg-[#F8F9DE]"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="text-left text-sm px-4 ">{faq.answer}</div>
+                </div>
+              </div>
+            </div>
+            <span className="text-xl absolute right-4 top-6">
+              {openIndex === index ? (
+                <svg
+                  width="16"
+                  height="8"
+                  viewBox="0 0 16 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Arrow Icon</title>
+                  <path
+                    d="M1.242 7.78973L7.48837 1.6421C7.62465 1.50727 7.80863 1.43164 8.00034 1.43164C8.19206 1.43164 8.37603 1.50727 8.51232 1.6421L14.7587 7.7884C14.8958 7.92316 15.0804 7.99867 15.2727 7.99867C15.4649 7.99867 15.6495 7.92316 15.7866 7.7884C15.8542 7.72256 15.9078 7.64388 15.9445 7.55698C15.9811 7.47009 16 7.37673 16 7.28243C16 7.18812 15.9811 7.09477 15.9445 7.00787C15.9078 6.92097 15.8542 6.84229 15.7866 6.77646L9.5416 0.630156C9.13026 0.226279 8.57682 0 8.00034 0C7.42387 0 6.87042 0.226279 6.45908 0.630156L0.214045 6.77646C0.146312 6.84231 0.0924715 6.92107 0.0557069 7.0081C0.0189423 7.09512 0 7.18863 0 7.28309C0 7.37756 0.0189423 7.47107 0.0557069 7.55809C0.0924715 7.64511 0.146312 7.72388 0.214045 7.78973C0.351179 7.92449 0.535754 8 0.72802 8C0.920286 8 1.10486 7.92449 1.242 7.78973Z"
+                    fill="black"
+                  />
+                </svg>
+              ) : (
+                <svg
+                  width="16"
+                  height="8"
+                  viewBox="0 0 16 8"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>Arrow Icon</title>
+                  <path
+                    d="M1.242 0.21027L7.48837 6.3579C7.62465 6.49273 7.80863 6.56836 8.00034 6.56836C8.19206 6.56836 8.37603 6.49273 8.51232 6.3579L14.7587 0.211604C14.8958 0.0768442 15.0804 0.00133371 15.2727 0.00133371C15.4649 0.00133371 15.6495 0.0768442 15.7866 0.211604C15.8542 0.277436 15.9078 0.356119 15.9445 0.443017C15.9811 0.529913 16 0.623267 16 0.717574C16 0.811882 15.9811 0.905234 15.9445 0.992131C15.9078 1.07903 15.8542 1.15771 15.7866 1.22354L9.5416 7.36984C9.13026 7.77372 8.57682 8 8.00034 8C7.42387 8 6.87042 7.77372 6.45908 7.36984L0.214045 1.22354C0.146312 1.15769 0.0924715 1.07893 0.0557069 0.991905C0.0189423 0.904884 0 0.811375 0 0.716907C0 0.622439 0.0189423 0.528931 0.0557069 0.44191C0.0924715 0.354889 0.146312 0.276123 0.214045 0.21027C0.351179 0.0755105 0.535754 0 0.72802 0C0.920286 0 1.10486 0.0755105 1.242 0.21027Z"
+                    fill="black"
+                  />
+                </svg>
+              )}
+            </span>
+          </button>
         </div>
-      </div>
+      ))}
     </div>
   );
-}
+};
+
+export default ContactBoxMobile;

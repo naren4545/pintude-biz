@@ -32,16 +32,9 @@ body {
 }
 
 
-p{
 
-  font-size: 24px;
-  line-height: 36px;
-}
 
-.slick-track {
-  display: flex;
-  align-items: center;
-}
+
 .font-m{
 
 
@@ -62,3 +55,17 @@ hr{
 
 
 /* Styles for the custom arrows and pagination dots */
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}

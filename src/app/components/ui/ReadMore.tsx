@@ -23,7 +23,7 @@ const ReadMore: React.FC<ReadMoreProps> = ({ text, maxLength }) => {
 
   return (
     <div>
-      <p>
+      <p className='transition-all duration-300 ease-in-ou'>
         {isExpanded ? text : `${text.slice(0, maxLength)}...`}
         <button onClick={toggleReadMore} className='font-semibold' >
           {isExpanded ? 'Read Less' : 'Read More'}

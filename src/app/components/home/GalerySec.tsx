@@ -8,7 +8,7 @@ interface GallerySection {
 }
 export default function GallerySection({images}:GallerySection) {
   return (
-    <section className="bg-white">
+    <section className="bg-white lg:block hidden">
       <div className="max-w-[1440px]  mx-auto ">
         <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 text-center">
           <div>

@@ -18,12 +18,13 @@ import Image4 from "../../assests/Business6.png";
 import Bcard from '../../assests/bizCard.png'
 
 import promo from '../../assests/image 13.png'
+import CurvedImageSlider from "./CurvedImageSlider";
 export default function HomePG() {
 
 const data={
 
 headerContent:{
-  headerBizContent:"India>Goa>bardez>mapusa>biz_category>biz_name",
+  headerBizContent:"India > Goa > bardez > mapusa > biz_category > biz_name",
   onClick:"+91 123 456 7890"
   
 },
@@ -213,10 +214,12 @@ brodcast2:{
       <SectionOne heroSection={data.heroSectionData} contactDetail={data.ContactDetails}/>
       <MapUI map={data.MapUIsrc}/>
       <GallerySection images={data.GallerySectionImges}/>
+      <CurvedImageSlider/>
       <BuisnessCard digitalBuisnessCard={data.BuisnessCard.digitalBuisnessCard} onClick={data.BuisnessCard.onclick}/>
       {/* <SectionCard bizName={data.heroSectionData.businessName} Brodcast2={data.brodcast2}  Brodcast1={data.brodcast1} /> */}
       <ResponsiveSlider broadcasts={data.broadcast3} bizName={data.heroSectionData.businessName}/>
       <Footer biz_name={data.heroSectionData.businessName}/>
+    
     </div>
   );
 }

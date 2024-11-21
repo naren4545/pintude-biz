@@ -59,7 +59,7 @@ interface HeroSectionProps {
                {businessInfo}
               </p>
              
-              <div className="shadow-xl p-4 rounded-xl my-6">
+              <div className=" p-4 rounded-xl my-6">
               <div className="flex flex-wrap justify-center gap-4">
   {tags.map((tag) => (
     <div
@@ -118,7 +118,7 @@ interface HeroSectionProps {
                {businessInfo}
               </p>
              
-              <div className="shadow-xl p-4 rounded-xl mb-5">
+              <div className=" p-4 rounded-xl mb-5">
               <div className="flex flex-wrap justify-center md:gap-4 gap-2">
   {tags.map((tag) => (
     <div

@@ -98,11 +98,11 @@ interface HeroSectionProps {
           <div className="flex justify-center gap-4 border-[#F55256] rounded-lg border-2 p-3 items-center text-center">
             <Image className='w-6' src={two} alt="location" />
 <div>
-            <p className="text-[#E78B01] text-[8px] leading-2 font-semibold">
+            <p className="text-[#F55256] text-[8px] leading-2 font-semibold">
               Verify Your Location and</p>
-              <p className="text-[#E78B01] leading-2 text-[8px] font-semibold">
+              <p className="text-[#F55256] leading-2 text-[8px] font-semibold">
               Earn This Badge Now! </p>
-             <p className='text-[8px] text-[#E78B01]  leading-2'> <span className="underline font-bold">Verify Now</span>
+             <p className='text-[8px] text-[#F55256]  leading-2'> <span className="underline font-bold">Verify Now</span>
             </p>
             </div>
           </div>

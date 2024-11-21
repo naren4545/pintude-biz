@@ -50,7 +50,7 @@ export default function ContactBox({
           </div>
         </div>
       </div>
-      <div className="lg:max-w-[293px]  shadow-[0px_0px_6px_2px_#00000040]  py-3 px-5   rounded-[10px]">
+      <div className="lg:max-w-[293px]   shadow-[0px_0px_6px_2px_#00000040]  py-3 px-5   rounded-[10px]">
         <svg
           width="70"
           height="60"
@@ -72,7 +72,7 @@ export default function ContactBox({
         <p className="text-base mb-1">
           <a href={"tel:" + Contact.phone}>
             <svg
-              className="inline mr-1 mt-[-3px]"
+              className="inline mr-3 mt-[-3px]"
               width="17"
               height="17"
               viewBox="0 0 17 17"
@@ -92,7 +92,7 @@ export default function ContactBox({
         <p className="text-base mb-1">
           <a href={"mailto:" + Contact.email}>
             <svg
-              className="inline mr-1 mt-[-3px]"
+              className="inline mr-3 mt-[-3px]"
               width="14"
               height="12"
               viewBox="0 0 14 12"
@@ -110,7 +110,7 @@ export default function ContactBox({
         </p>
         <p className="text-base mb-1">
           <svg
-            className="inline mr-1 mt-[-3px]"
+            className="inline mr-3 mt-[-3px]"
             width="14"
             height="14"
             viewBox="0 0 14 14"

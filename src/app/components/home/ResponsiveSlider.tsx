@@ -79,7 +79,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
 
 <div className="mb-7">
   
-   <h2 className="font-m lg:text-[40px] lg:leading-[50px] text-2xl font-bold text-center">Latest broadcast from {bizName}</h2>
+   <h2 className="font-noto lg:text-[40px] lg:leading-[50px] text-2xl font-bold text-center">Latest broadcast from {bizName}</h2>
   <p className="text-center text-sm lg:text-2xl">Engage with your customers by scheduling special announcements or promotions.</p>
    </div>
       

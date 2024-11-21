@@ -17,7 +17,7 @@ export default function BuisnessCard({
             <Image className="lg:block hidden" src={Bcard} alt="buisess card" />
           </div>
           <div className="w-full lg:w-[40%] mt-7 lg:mt-0 lg:text-left text-center">
-            <h2 className="font-m lg:text-[40px] text-2xl font-bold lg:leading-[50px]">
+            <h2 className="font-m lg:text-[40px] font-noto text-2xl font-bold lg:leading-[50px]">
               Download Your <span className="text-[#13A8DA]">Digital</span>{" "}
               Business Card
             </h2>

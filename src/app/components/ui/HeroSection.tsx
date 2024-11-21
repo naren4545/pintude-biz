@@ -34,7 +34,7 @@ interface HeroSectionProps {
           </div>
           <div className="lg:col-span-6 col-span-7 ">
             <div>
-              <h1 className="md:text-5xl pb-6 text-xl font-semibold flex justify-between">
+              <h1 className="md:text-5xl font-r pb-6 text-xl font-semibold flex justify-between">
                 {businessName}
                 <span>
                   <svg

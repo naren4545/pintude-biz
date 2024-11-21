@@ -42,7 +42,7 @@ const CardCustom: React.FC<CardCustomProps> = ({ brodcast }) => {
           className="absolute right-[18px] top-[18px]"
         />
         <div className="p-4">
-          <h2 className="lg:text-3xl text-base italic pr-5 font-bold text-gray-800">
+          <h2 className="lg:text-3xl lg:text-[40px] text-base italic pr-5 font-bold text-gray-800">
             {brodcast.title}
           </h2>
           <div className="flex items-center mt-2 text-sm text-gray-500">

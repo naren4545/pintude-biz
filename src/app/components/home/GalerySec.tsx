@@ -10,6 +10,8 @@ export default function GallerySection({images}:GallerySection) {
   return (
     <section className="bg-white lg:block hidden">
       <div className="max-w-[1440px]  mx-auto ">
+
+        <h2 className="lg:text-[40px] text-2xl font-bold text-center font-noto py-5">Explore Our Visual Showcase</h2>
         <div className="grid grid-cols-1 place-items-center md:grid-cols-2 lg:grid-cols-4 gap-4 p-4 text-center">
           <div>
             <img className="lg:mt-16 md:mt-0" src={images[1]} />

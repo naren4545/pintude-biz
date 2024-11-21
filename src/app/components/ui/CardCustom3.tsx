@@ -14,7 +14,7 @@ const CardCustom3 = ({ title, date, content }: Broadcast) => {
     <div className="max-w-[986px] m-4  py-5 relative mx-auto bg-white shadow-[0px_0px_8px_2px_#00000040] rounded-lg overflow-hidden">
       <Image alt="dot" src={dot} className="absolute right-[18px] top-[18px]" />
       <div className="p-4">
-        <h2 className="lg:text-3xl text-base font-bold text-gray-800 pr-4">
+        <h2 className="lg:text-3xl font-noto text-base font-bold text-gray-800 pr-4">
           {title}{" "}
         </h2>
         <div className="flex items-center mt-2 text-sm text-gray-500">

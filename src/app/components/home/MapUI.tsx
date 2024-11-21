@@ -1,5 +1,5 @@
 import Image from "next/image";
-import mapi from "../../assests/Group 563.png";
+import mapi from "../../assests/map2.svg";
 import { Interface } from "readline";
 interface mapUI {
   map: string;

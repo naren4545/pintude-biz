@@ -93,7 +93,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
   };
 
   return (
-    <div className="relative p-4 mx-auto">
+    <div className="relative p-4 py-10 mx-auto">
 
 <div className="mb-7">
   
@@ -117,7 +117,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
                   return (
                     <div
                       key={idx}
-                      className="transition-transform duration-300 ease-in-out mx-3"
+                      className="transition-transform duration-300 ease-in-out mx-3 my-10"
                     >
                       {brodcastType === 3 && (
                         <CardCustom3

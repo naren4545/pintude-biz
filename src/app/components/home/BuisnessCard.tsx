@@ -10,7 +10,7 @@ export default function BuisnessCard({
   onClick,
 }: BuisnessCardProps) {
   return (
-    <section>
+    <section className="py-10">
       <div className="max-w-[1440px]  mx-auto p-3">
         <div className="flex flex-col gap-7  items-center lg:flex-row">
           <div className="w-full lg:w-[60%]">
@@ -18,7 +18,7 @@ export default function BuisnessCard({
           </div>
           <div className="w-full lg:w-[40%] mt-7 lg:mt-0 lg:text-left text-center">
             <h2 className="font-m lg:text-[40px] font-noto text-2xl font-bold lg:leading-[50px]">
-              Download Your <span className="text-[#13A8DA]">Digital</span>{" "}
+              Download Your <span className="text-[#F55256]">Digital</span>{" "}
               Business Card
             </h2>
 

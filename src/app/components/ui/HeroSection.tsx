@@ -34,7 +34,7 @@ interface HeroSectionProps {
           </div>
           <div className="lg:col-span-6 col-span-7 ">
             <div>
-              <h1 className="md:text-5xl font-r pb-6 text-xl font-semibold flex justify-between">
+              <h1 className="md:text-5xl font-r pb-6 text-xl font-semibold flex gap-4">
                 {businessName}
                 <span>
                   <svg
@@ -47,7 +47,7 @@ interface HeroSectionProps {
                   >
                     <path
                       d="M34 15.9924L30.2291 11.742L30.7545 6.11562L25.1755 4.86192L22.2545 0L17 2.2322L11.7455 0L8.82454 4.86192L3.24545 6.10033L3.77091 11.7267L0 15.9924L3.77091 20.2427L3.24545 25.8844L8.82454 27.1381L11.7455 32L17 29.7525L22.2545 31.9847L25.1755 27.1228L30.7545 25.8691L30.2291 20.2427L34 15.9924ZM13.9091 23.6369L7.72727 17.5213L9.90636 15.3655L13.9091 19.3101L24.0936 9.23459L26.2727 11.4056L13.9091 23.6369Z"
-                      fill="#008CBB"
+                      fill="#F55256"
                     />
                   </svg>
                 </span>{" "}
@@ -83,8 +83,6 @@ interface HeroSectionProps {
 
               </div>
             </div>
-
-
             <div className="flex flex-col lg:flex-row gap-3 max-w-[190px]  mt-7 lg:hidden ">
           <div className="flex border-[#F55256] rounded-lg  border-2 gap-4 p-3 justify-center items-center text-center">
             <Image className='w-6' src={one} alt="person" />
@@ -105,6 +103,28 @@ interface HeroSectionProps {
              <p className='text-[8px] text-[#F55256]  leading-2'> <span className="underline font-bold">Verify Now</span>
             </p>
             </div>
+          </div>
+        </div>
+
+            <div className=" flex-col lg:flex-row gap-3 px-3 mx-auto mt-7 lg:flex hidden">
+          <div className="flex border-[#F55256] rounded-lg  border-2 gap-4 p-4 justify-center items-center text-center">
+            <Image src={one} alt="person" />
+
+            <p className="text-[#F55256] text-xl font-semibold">
+              Verified Business <br />
+              Profile
+            </p>
+          </div>
+
+          <div className="flex justify-center gap-4 border-[#F55256] rounded-lg border-2 p-4 items-center text-center">
+            <Image src={two} alt="location" />
+
+            <p className="text-[#F55256] text-xs font-semibold">
+              Verify Your Location and
+              <br />
+              Earn This Badge Now! <br />
+              <span className="underline font-bold">Verify Now</span>
+            </p>
           </div>
         </div>
 

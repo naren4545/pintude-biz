@@ -170,7 +170,7 @@ Address
           <button
             type="button"
             onClick={() => toggleAccordion(index)}
-            className={`w-full flex justify-between max-w-[894px]  ${
+            className={`w-full flex justify-between  ${
               openIndex === index ? "" : ""
             } border border-[#c6e7f4] rounded-[5px] shadow-lg`}
           >

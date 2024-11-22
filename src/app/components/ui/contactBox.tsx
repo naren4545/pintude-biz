@@ -21,7 +21,7 @@ export default function ContactBox({
 }: ContactBoxProps) {
   return (
     <div className=" grid-cols-1 lg:grid-cols-3 gap-4 lg:grid hidden ">
-      <div className=" lg:max-w-[293px]    py-3 px-5 shadow-[0px_0px_6px_2px_#00000040]   rounded-[5px]">
+      <div className=" lg:max-w-[381px]    py-3 px-5 shadow-[0px_0px_6px_2px_#00000040]   rounded-[5px]">
       <div className="flex gap-7 pb-5">
         <svg
           width="70"
@@ -51,7 +51,7 @@ export default function ContactBox({
           </div>
         </div>
       </div>
-      <div className="lg:max-w-[293px]   shadow-[0px_0px_6px_2px_#00000040]  py-3 px-5   rounded-[10px]">
+      <div className="lg:max-w-[381px]   shadow-[0px_0px_6px_2px_#00000040]  py-3 px-5   rounded-[10px]">
         <div className="flex gap-7 pb-5">
         <svg
           width="70"
@@ -71,7 +71,7 @@ export default function ContactBox({
 
         <p className="text-2xl font-medium my-5">Contact </p>
         </div>
-        <p className="text-base mb-1">
+        {/* <p className="text-base mb-1">
           <a href={"tel:" + Contact.phone}>
             <svg
               className="inline mr-3 mt-[-3px]"
@@ -89,7 +89,7 @@ export default function ContactBox({
             </svg>
             {Contact.phone}
           </a>
-        </p>
+        </p> */}
 
         <p className="text-base mb-1">
           <a href={"mailto:" + Contact.email}>
@@ -130,7 +130,7 @@ export default function ContactBox({
         </p>
       </div>
 
-      <div className=" lg:max-w-[293px]  py-3  px-5 shadow-[0px_0px_6px_2px_#00000040] rounded-[10px]">
+      <div className=" lg:max-w-[381px]  py-3  px-5 shadow-[0px_0px_6px_2px_#00000040] rounded-[10px]">
       <div className="flex gap-7 pb-5">
       <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="70" height="60" rx="5" fill="#FF5E62"/>

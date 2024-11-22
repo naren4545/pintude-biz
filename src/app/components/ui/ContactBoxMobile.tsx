@@ -87,7 +87,7 @@ const ContactBoxMobile = function ({
         </span>
       ),
       answer:(<div className="pl-9">
-        <p className="text-sm mb-1">
+        {/* <p className="text-sm mb-1">
           <a href={"tel:" + Contact.phone}>
             <svg
               className="inline mr-4 mt-[-3px]"
@@ -105,7 +105,7 @@ const ContactBoxMobile = function ({
             </svg>
             {Contact.phone}
           </a>
-        </p>
+        </p> */}
 
         <p className="text-sm mb-1">
           <a href={"mailto:" + Contact.email}>

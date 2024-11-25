@@ -20,7 +20,7 @@ export default function TimingBox() {
   const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   const currentDay = weekdays[currentDayIndex];
   const todayTiming = timingsData.find((timing) => timing.day === currentDay);
-console.log(currentDay)
+
   return (
     <div className="relative lg:max-w-[381px] pt-3 shadow-[0px_0px_6px_2px_#00000040] rounded-[5px] bg-white">
       {/* Header */}
@@ -45,9 +45,7 @@ console.log(currentDay)
       <div className="flex justify-between pb-3 bg-[#F8F9DE] px-5">
         <div>
           <p className="text-base font-medium">{todayTiming?.day}</p>
-          <p className="text-[10px] lg:text-xs italic text-[#9E9D9D]">
-            Working Hours:
-          </p>
+          <p className="text-[10px] lg:text-xs italic text-[#9E9D9D]">Working Hours:</p>
           <p className="text-sm">
             {todayTiming?.workingHours === "Closed" ? "Closed" : todayTiming?.workingHours}
           </p>
@@ -55,20 +53,24 @@ console.log(currentDay)
         <div>
           <p className="text-sx font-medium invisible">Monday</p>
           <p className="text-[10px] lg:text-xs italic text-[#9E9D9D]">Lunch break:</p>
-          <p className="text-sm">{todayTiming?.lunchBreak || (todayTiming?.workingHours === "Closed" ? "N/A" : "-")}</p>
+          <p className="text-sm">
+            {todayTiming?.lunchBreak || (todayTiming?.workingHours === "Closed" ? "N/A" : "-")}
+          </p>
         </div>
       </div>
 
-      {/* Floating Timings */}
+      {/* Floating Timings with Animation */}
       <div
-        className={`absolute top-full left-0 mt-3 w-full bg-white shadow-[0px_0px_10px_2px_#00000040] rounded-[5px] z-10 overflow-hidden transition-all duration-300 ${
-          expanded ? "max-h-auto opacity-100" : "max-h-0 opacity-0"
+        className={`absolute top-full left-0 mt-3 w-full bg-white shadow-[0px_0px_10px_2px_#00000040] rounded-[5px] z-10 overflow-hidden transform transition-all duration-300 ease-in-out ${
+          expanded ? "max-h-[500px] opacity-100 scale-y-100" : "max-h-0 opacity-0 scale-y-0"
         }`}
       >
         {timingsData.map((timing, index) => (
           <div
             key={index}
-            className={`flex justify-between py-2 px-5 border-b border-gray-200 last:border-none ${currentDay===timing.day ? "bg-[#F8F9DE]" : ""}`}
+            className={`flex justify-between py-2 px-5 border-b border-gray-200 last:border-none ${
+              currentDay === timing.day ? "bg-[#F8F9DE]" : ""
+            }`}
           >
             <div>
               <p className="text-base font-medium">{timing.day}</p>
@@ -81,7 +83,9 @@ console.log(currentDay)
             </div>
             <div>
               <p className="text-sx font-medium invisible">Monday</p>
-              <p className="text-[10px] lg:text-xs italic text-[#9E9D9D]">{timing.workingHours === "Closed" ? "" : "Lunch break:"}</p>
+              <p className="text-[10px] lg:text-xs italic text-[#9E9D9D]">
+                {timing.workingHours === "Closed" ? "" : "Lunch break:"}
+              </p>
               <p className="text-sm">
                 {timing.lunchBreak || (timing.workingHours === "Closed" ? "" : "-")}
               </p>
@@ -121,7 +125,7 @@ console.log(currentDay)
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+              d="M11.8648 6.15803C11.6759 5.95657 11.3595 5.94637 11.158 6.13523L7.5 9.56464L3.84197 6.13523C3.64052 5.94637 3.3241 5.95657 3.13523 6.15803C2.94637 6.35948 2.95657 6.6759 3.15803 6.86477L7.15803 10.6148C7.35036 10.7951 7.64964 10.7951 7.84197 10.6148L11.842 6.86477C12.0434 6.6759 12.0536 6.35948 11.8648 6.15803Z"
               fill="currentColor"
               fill-rule="evenodd"
               clip-rule="evenodd"

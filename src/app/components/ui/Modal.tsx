@@ -22,7 +22,7 @@ console.log(isOpen)
 
   return (
   
-      <dialog className='shadow-lg rounded-lg overflow-hidden' ref={modalRef}>
+      <dialog className='shadow-lg rounded-lg overflow-hidden bg-[#00000030]' ref={modalRef}>
         {children}
       </dialog>
     

@@ -165,7 +165,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
                       }
                       className={`mx-1 w-8 h-8 rounded-[6px] ${
                         currentIndex === paginationIndex * paginationGroupSize + index
-                          ? "bg-[#F55256] text-white"
+                          ? "bg-primary text-white shadow-[1px_1px_6px_0px_rgba(0,0,0,0.25)]"
                           : "shadow-[1px_1px_6px_0px_rgba(0,0,0,0.25)]"
                       }`}
                     >

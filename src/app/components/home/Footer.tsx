@@ -21,9 +21,9 @@ export default function Footer({ biz_name }: footer) {
 
         <a
           href="/"
-          style={{ border: "3px solid #FF5E62" }}
+          style={{ border: "3px solid var(--color-primary)" }}
           className={
-            "text-[#FF5E62] lg:min-w-[180px]  border-solid font-semibold py-4 lg:px-8 px-5 text-center inline-block bg-white  md:text-2xl text-sm rounded-[10px]"
+            "text-primary lg:min-w-[180px]  border-solid font-semibold py-4 lg:px-8 px-5 text-center inline-block bg-white  md:text-2xl text-sm rounded-[10px]"
           }
         >
           <svg
@@ -36,7 +36,7 @@ export default function Footer({ biz_name }: footer) {
           >
             <path
               d="M2.80006 1.05814L4.73706 0.474141C5.37634 0.281707 6.06379 0.328397 6.67117 0.605501C7.27856 0.882606 7.7644 1.3712 8.03806 1.98014L9.39606 5.00014C9.63176 5.52406 9.69746 6.10865 9.58393 6.67182C9.4704 7.23498 9.18334 7.74846 8.76306 8.14014L6.69606 10.0661C6.41906 10.3291 6.62906 11.3541 7.64106 13.1081C8.65406 14.8631 9.43706 15.5571 9.79806 15.4491L12.5061 14.6211C13.055 14.4532 13.6427 14.4613 14.1868 14.6442C14.7308 14.8272 15.2041 15.1757 15.5401 15.6411L17.4701 18.3161C17.8599 18.8563 18.0404 19.5196 17.978 20.1828C17.9157 20.846 17.6147 21.4641 17.1311 21.9221L15.6391 23.3351C15.1574 23.7913 14.5634 24.1115 13.9176 24.2631C13.2718 24.4147 12.5974 24.3923 11.9631 24.1981C8.83706 23.2411 5.94206 20.4011 3.23906 15.7181C0.530064 11.0281 -0.492936 7.07214 0.220064 3.84014C0.363869 3.18889 0.678754 2.58778 1.13226 2.09877C1.58577 1.60976 2.16148 1.25054 2.80006 1.05814Z"
-              fill="#F55256"
+              style={{ fill: "var(--color-primary)" }}
             />
           </svg>
           Call biz_name
@@ -45,7 +45,7 @@ export default function Footer({ biz_name }: footer) {
 
       <hr />
       <div className="max-w-[1440px] mx-auto px-4 pt-9 ">
-        <div className="max-w-[1200px] mb-9 mx-auto rounded-lg px-7 py-12 bg-[#DCE35B]">
+        <div className="max-w-[1200px] mb-9 mx-auto rounded-lg px-7 py-12 bg-tertiary">
           <div className="flex flex-col lg:flex-row lg:text-left text-center items-center gap-4 justify-between">
             <div className="lg:w-[70%] w-full ">
               <h2 className="font-semibold lg:text-4xl text-2xl mb-4">
@@ -85,7 +85,7 @@ export default function Footer({ biz_name }: footer) {
           guidelines, please report them to us.{" "}
         </p>
         <p className="text-center pt-3 pb-10">
-          <a href="https://www.buymeacoffee.com/bridegroom" className="p-3 rounded-lg border border-[#C11012] text-[#C11012] text-base font-medium" target="_blank">
+          <a href="https://www.buymeacoffee.com/bridegroom" className="px-3 py-2 rounded-lg border border-[#C11012] text-[#C11012] text-base font-medium" target="_blank">
           <svg width="16" height="16" viewBox="0 0 16 16" className="inline mr-2" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8 12.4444C8.25185 12.4444 8.46311 12.3591 8.63378 12.1884C8.80444 12.0178 8.88948 11.8068 8.88889 11.5556C8.8883 11.3043 8.80296 11.0933 8.63289 10.9227C8.46281 10.752 8.25185 10.6667 8 10.6667C7.74815 10.6667 7.53719 10.752 7.36711 10.9227C7.19704 11.0933 7.1117 11.3043 7.11111 11.5556C7.11052 11.8068 7.19585 12.0181 7.36711 12.1893C7.53837 12.3606 7.74933 12.4456 8 12.4444ZM7.11111 8.88889H8.88889V3.55556H7.11111V8.88889ZM4.66667 16L0 11.3333V4.66667L4.66667 0H11.3333L16 4.66667V11.3333L11.3333 16H4.66667Z" fill="#C11012"/>
 </svg>

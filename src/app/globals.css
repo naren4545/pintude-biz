@@ -9,6 +9,10 @@
 :root {
   --background: #171717;
   --foreground: #FFFFFF;
+  --color-primary: #0044ff; /* Default primary color */
+  --color-secondary: #FFEADC; /* Default secondary color */
+  --color-tertiary: #F3F4F6; /* Default tertiary color */
+  --color-quaternary: #1F2937; /* Default quaternary color */
 }
 
 /* @media (prefers-color-scheme: dark) {

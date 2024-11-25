@@ -80,12 +80,12 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
       {isOpen && (
         <Modal isOpen={isOpen}>
           <div className="max-w-[90vw]  relative bg=[] mx-auto bg-white rounded-lg overflow-hidden cursor-pointer">
-            <div
-              className="text-center absolute top-0 bg-transparent p-4 font-bold text-3xl"
+            <button
+              className="text-center absolute top-0 bg-transparent  px-6 font-bold text-3xl"
               onClick={handleCloseModal}
             >
-              X
-            </div>
+              <svg className="inline z-40 mx-2" width="20" height="20" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.8536 2.85355C13.0488 2.65829 13.0488 2.34171 12.8536 2.14645C12.6583 1.95118 12.3417 1.95118 12.1464 2.14645L7.5 6.79289L2.85355 2.14645C2.65829 1.95118 2.34171 1.95118 2.14645 2.14645C1.95118 2.34171 1.95118 2.65829 2.14645 2.85355L6.79289 7.5L2.14645 12.1464C1.95118 12.3417 1.95118 12.6583 2.14645 12.8536C2.34171 13.0488 2.65829 13.0488 2.85355 12.8536L7.5 8.20711L12.1464 12.8536C12.3417 13.0488 12.6583 13.0488 12.8536 12.8536C13.0488 12.6583 13.0488 12.3417 12.8536 12.1464L8.20711 7.5L12.8536 2.85355Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            </button>
 
             <Image
               alt="dot"
@@ -95,14 +95,14 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
             <div className="">
               <div className="text-center">
                 <img
-                  className="rounded-lg mx-auto w-[90vw] "
+                  className=" mx-auto w-[90vw] "
                   src={promo.src}
                   alt="Card Image"
                 />
               </div>
 
               <div className="p-4 absolute top-[33px] left-[11]">
-                <h2 className="text-3xl font-bold text-white">
+                <h2 className="lg:text-3xl font-noto text-base italic font-bold text-white">
                   {brodcast.title}
                 </h2>
                 <div className="flex items-center mt-2 text-sm text-white">

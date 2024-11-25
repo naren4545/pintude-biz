@@ -1,4 +1,4 @@
-import Color from "./components/ui/color";
+import Color from "./components/ui/Color";
 import Image from "next/image";
 
 import HomePG from "./components/home/Home";

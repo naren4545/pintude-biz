@@ -1,4 +1,5 @@
 import React from "react";
+import TimingBox from "./TimimgBox";
 interface ContactInfo {
   phone: string;
   email: string;
@@ -20,37 +21,8 @@ export default function ContactBox({
   isOpen,
 }: ContactBoxProps) {
   return (
-    <div className=" grid-cols-1 lg:grid-cols-3 gap-4 lg:grid hidden ">
-      <div className=" lg:max-w-[381px]    py-3 px-5 shadow-[0px_0px_6px_2px_#00000040]   rounded-[5px]">
-      <div className="flex gap-7 pb-5">
-        <svg
-          width="70"
-          height="60"
-          viewBox="0 0 70 60"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect width="70" height="60" rx="5" fill="#FF5E62" />
-          <path
-            d="M35 46C39.2435 46 43.3131 44.3143 46.3137 41.3137C49.3143 38.3131 51 34.2435 51 30C51 25.7565 49.3143 21.6869 46.3137 18.6863C43.3131 15.6857 39.2435 14 35 14C30.7565 14 26.6869 15.6857 23.6863 18.6863C20.6857 21.6869 19 25.7565 19 30C19 34.2435 20.6857 38.3131 23.6863 41.3137C26.6869 44.3143 30.7565 46 35 46ZM35 10C37.6264 10 40.2272 10.5173 42.6537 11.5224C45.0802 12.5275 47.285 14.0007 49.1421 15.8579C50.9993 17.715 52.4725 19.9198 53.4776 22.3463C54.4827 24.7728 55 27.3736 55 30C55 35.3043 52.8929 40.3914 49.1421 44.1421C45.3914 47.8929 40.3043 50 35 50C23.94 50 15 41 15 30C15 24.6957 17.1071 19.6086 20.8579 15.8579C24.6086 12.1071 29.6957 10 35 10ZM36 20V30.5L45 35.84L43.5 38.3L33 32V20H36Z"
-            fill="white"
-          />
-        </svg>
-        <p className="text-2xl font-medium my-5">Timings</p>
-</div>
-        <div className="flex justify-between ">
-        <div>
-          <p className="text-base font-medium">Monday</p>
-          <p className="text-[10px] lg:text-xs italic text-[#9E9D9D]">Working Hours:</p>
-          <p className="text-sm">{timing}</p>
-          </div>
-          <div>
-          <p className="text-sx font-medium invisible">Monday</p>
-          <p className="text-[10px] lg:text-xs  italic text-[#9E9D9D]">Lunch break:</p>
-          <p className="text-sm">1:00 PM - 2:30 PM</p>
-          </div>
-        </div>
-      </div>
+    <div className=" grid-cols-1 lg:grid-cols-3 gap-8 grid  ">
+     <TimingBox/>
       <div className="lg:max-w-[381px]   shadow-[0px_0px_6px_2px_#00000040]  py-3 px-5   rounded-[10px]">
         <div className="flex gap-7 pb-5">
         <svg

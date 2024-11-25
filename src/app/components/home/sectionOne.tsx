@@ -48,7 +48,7 @@ interface SectionOneProps {
 }
 const SectionOne: React.FC<SectionOneProps> = ({ heroSection, contactDetail }) => {
   return (
-    <section className="hero">
+    <section className="shadow-md">
       <div className="max-w-[1440px] relative py-10 px-4  mx-auto ">
         
 
@@ -64,12 +64,12 @@ const SectionOne: React.FC<SectionOneProps> = ({ heroSection, contactDetail }) =
       
 
         <div className="max-w-[1170px] mx-auto my-10">
-          <ContactBoxMobile  weekdays={contactDetail.weekdays}
+          {/* <ContactBoxMobile  weekdays={contactDetail.weekdays}
             timing={contactDetail.timing}
             isOpen={contactDetail.isOpen}
             Contact={contactDetail.contact}
             addres="1901 Thornridge Cir. Shiloh, 
-Hawaii 81063"/>
+Hawaii 81063"/> */}
           <ContactBox
             weekdays={contactDetail.weekdays}
             timing={contactDetail.timing}

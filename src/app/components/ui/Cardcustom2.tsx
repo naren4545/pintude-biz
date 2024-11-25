@@ -40,11 +40,17 @@ const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
         <div className="">
           <div className="text-center">
             <Image
-              className="rounded-lg mx-auto"
+              className="rounded-lg mx-auto hidden"
               src={promo}
               alt="Card Image"
               layout="responsive"
             />
+
+
+<svg className="absolute right-[18px] top-[18px]" width="7" height="31" viewBox="0 0 7 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 15.3469H3.01583V15.364H3V15.3469ZM3 3.35547H3.01583V3.3726H3V3.35547ZM3 27.3383H3.01583V27.3555H3V27.3383Z" stroke="white" stroke-width="6" stroke-linejoin="round"/>
+</svg>
+
           </div>
 
           <div className="p-4 w-full absolute bg-gradient-to-t from-black to-transparent lg:bottom-0 bottom-0 pb-5 left-[11]">

@@ -14,7 +14,7 @@ console.log(text_array)
     <header
       className={
        
-        " max-w-[1440px] md:py-10 py-5 relative text-center  mx-auto lg:z-10 w-full lg:bg-transparent "
+        " max-w-[1440px] md:py-5 py-5 relative text-center  mx-auto lg:z-10 w-full lg:bg-transparent "
       }
     >
       <div className="header-wrapper">

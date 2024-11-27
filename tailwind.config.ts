@@ -16,6 +16,7 @@ const config: Config = {
           secondary: "var(--color-secondary)",
           tertiary: "var(--color-tertiary)",
           quaternary: "var(--color-quaternary)",
+          buttonHover: "var(--color-buttonHover)",
        
       },
     },

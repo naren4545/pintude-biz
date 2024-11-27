@@ -1,16 +1,17 @@
 "use client";
+import darkenColor from "@/app/util/darkerColor";
 import { useEffect, useState } from "react";
 
 const Color = () => {
   const [colors, setColors] = useState({
-    primary: "#FF5E62",
+    primary: "#F55256",
     secondary: "#F8F9DE",
     tertiary: "#DCE35B",
   });
 
   
     // Update colors dynamically when the component mounts
-    
+    const buttonColor = darkenColor(colors.primary, 5);
   
 
   return (
@@ -22,6 +23,7 @@ const Color = () => {
             --color-primary: ${colors.primary};
             --color-secondary: ${colors.secondary};
             --color-tertiary: ${colors.tertiary};
+            --color-buttonHover: ${buttonColor};
           }
         `}
       </style>

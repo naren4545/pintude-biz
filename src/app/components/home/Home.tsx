@@ -218,7 +218,7 @@ brodcast2:{
       <SectionOne colors={data.colors} heroSection={data.heroSectionData} contactDetail={data.ContactDetails}/>
       <MapUI map={data.MapUIsrc}/>
       <GallerySection images={data.GallerySectionImges}/>
-      <CurvedImageSlider/>
+      <CurvedImageSlider  />
       <BuisnessCard colors={data.colors} digitalBuisnessCard={data.BuisnessCard.digitalBuisnessCard} onClick={data.BuisnessCard.onclick}/>
       {/* <SectionCard bizName={data.heroSectionData.businessName} Brodcast2={data.brodcast2}  Brodcast1={data.brodcast1} /> */}
       <ResponsiveSlider colors={data.colors} broadcasts={data.broadcast3} bizName={data.heroSectionData.businessName}/>

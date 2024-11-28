@@ -35,7 +35,7 @@ export default function HeroSection({
   return (
     <div className="grid grid-cols-12 gap-4">
       <div className="lg:col-span-4 col-span-5  text-center lg:text-left">
-        <img src={promoImg} className="lg:mx-0 mx-auto" alt="buisness image" />
+        <Image src={promoImg} width={500} height={500} className="lg:mx-0 mx-auto" alt="buisness image" />
       </div>
       <div className="lg:col-span-6 col-span-7 ">
         <div>
@@ -112,7 +112,7 @@ export default function HeroSection({
           </div>
         </div>
         <div className="flex flex-col lg:flex-row gap-3 max-w-[190px]  mt-7 lg:hidden ">
-          <div style={{ border: "1px solid", borderColor: colors.primary,color:colors.primary }} className="flex border-primary rounded-lg  border-2 gap-4 p-3 justify-center items-center text-center">
+          <div style={{ borderColor: colors.primary,color:colors.primary }} className="flex border-primary rounded-lg  border-2 gap-4 p-3 justify-center items-center text-center">
             <svg
               className="w-6"
               viewBox="0 0 80 80"

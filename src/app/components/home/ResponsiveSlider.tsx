@@ -17,10 +17,16 @@ interface Broadcast {
 
 interface CustomSliderProps {
   broadcasts: Broadcast[];
-  bizName:string // Accept an array of Broadcasts
+  bizName:string;
+   // Accept an array of Broadcasts
+   colors:{
+    primary: string,
+  secondary: string,
+  tertiary: string,
+  }
 }
 
-const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
+const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName, colors }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [paginationIndex, setPaginationIndex] = useState(0); // Track which pagination group we are on
   const paginationGroupSize = 3; // Show 3 buttons at a time
@@ -121,13 +127,14 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
                     >
                       {brodcastType === 3 && (
                         <CardCustom3
+                        colors={colors}
                           title={broadcast.title}
                           date={broadcast.date}
                           content={broadcast.content}
                         />
                       )}
-                      {brodcastType === 2 && <CardCustom2 brodcast={broadcast} />}
-                      {brodcastType === 1 && <CardCustom brodcast={broadcast} />}
+                      {brodcastType === 2 && <CardCustom2 colors={colors} brodcast={broadcast} />}
+                      {brodcastType === 1 && <CardCustom colors={colors} brodcast={broadcast} />}
                     </div>
                   );
                 })}
@@ -163,6 +170,7 @@ const CustomSlider: React.FC<CustomSliderProps> = ({ broadcasts,bizName }) => {
                           paginationIndex * paginationGroupSize + index
                         )
                       }
+                      style={{ background:currentIndex === paginationIndex * paginationGroupSize + index? colors.primary:"" }}
                       className={`mx-1 w-8 h-8 rounded-[6px] ${
                         currentIndex === paginationIndex * paginationGroupSize + index
                           ? "bg-primary text-white shadow-[1px_1px_6px_0px_rgba(0,0,0,0.25)]"

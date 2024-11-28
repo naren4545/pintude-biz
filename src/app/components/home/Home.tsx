@@ -28,25 +28,29 @@ headerContent:{
   onClick:"+91 123 456 7890"
   
 },
-
+colors:{
+  primary: "#F55256",
+  secondary: "#F8F9DE",
+  tertiary: "#DCE35B",
+},
 heroSectionData:{
   promoImg:promoImg.src,
-  businessName:"Business Name",
+  businessName:"PinTude",
   Biz_Categor:"Biz_Category",
   Biz_Subcategory:"Biz_Subcategory",
-  businessInfo:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-tags:[
-  'tag1',
-  'tag2',
-  'tag3',
-  'tag4',
-  'tag5',
-  'tag6',
-  'tag7',
-  'tag8',
-  'tag9',
-  'tag10'
-],
+  businessInfo:"PinTude is a powerful app, designed to help businesses reach their local audience effortlessly. The app provides an easy-to-use platform where businesses can showcase their products, services, and special offerings to attract nearby customers. With a focus on fostering community connections, PinTude empowers businesses to grow their visibility and engage directly with customers in their area. Whether you're a small shop or a large multi-location brand, the PinTude app is your gateway to connecting with the people who matter most—your local community",
+  tags:[
+    "Local Growth",
+    "Community Ties",
+    "Business Boost",
+    "Customer Reach",
+    "Easy Marketing",
+    "Small Biz Help",
+    "Local Ads",
+    "Digital Reach",
+    "Brand Growth",
+    "Engage Locally"
+  ],
 
   
 },
@@ -210,15 +214,15 @@ brodcast2:{
 
   return (
     <div>
-      <Header headerContent="India>Goa>bardez>mapusa>biz_category>biz_name" onClick={data.headerContent.onClick}/>
-      <SectionOne heroSection={data.heroSectionData} contactDetail={data.ContactDetails}/>
+      <Header colors={data.colors} headerContent="India>Goa>bardez>mapusa>biz_category>biz_name" onClick={data.headerContent.onClick}/>
+      <SectionOne colors={data.colors} heroSection={data.heroSectionData} contactDetail={data.ContactDetails}/>
       <MapUI map={data.MapUIsrc}/>
       <GallerySection images={data.GallerySectionImges}/>
       <CurvedImageSlider/>
-      <BuisnessCard digitalBuisnessCard={data.BuisnessCard.digitalBuisnessCard} onClick={data.BuisnessCard.onclick}/>
+      <BuisnessCard colors={data.colors} digitalBuisnessCard={data.BuisnessCard.digitalBuisnessCard} onClick={data.BuisnessCard.onclick}/>
       {/* <SectionCard bizName={data.heroSectionData.businessName} Brodcast2={data.brodcast2}  Brodcast1={data.brodcast1} /> */}
-      <ResponsiveSlider broadcasts={data.broadcast3} bizName={data.heroSectionData.businessName}/>
-      <Footer biz_name={data.heroSectionData.businessName}/>
+      <ResponsiveSlider colors={data.colors} broadcasts={data.broadcast3} bizName={data.heroSectionData.businessName}/>
+      <Footer colors={data.colors} biz_name={data.heroSectionData.businessName}/>
     
     </div>
   );

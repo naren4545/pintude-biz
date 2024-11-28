@@ -6,22 +6,28 @@ import Image from "next/image";
 
 interface footer {
   biz_name: string;
+  colors:{
+    primary: string,
+  secondary: string,
+  tertiary: string,
+  }
 }
-export default function Footer({ biz_name }: footer) {
+export default function Footer({ biz_name, colors }: footer) {
   return (
     <footer className="[box-shadow:0px_-1px_8px_0px_#00000033]">
       <div className="max-w-[1000px] mx-auto px-4 py-9 text-center ">
         <h2 className="lg:text-4xl text-2xl font-bold mb-4">
-          Connect With Us—Solutions Are Just a Call Away!
+        Appointments or enquiry call business name
         </h2>
-        <p className="lg:text-2xl text-sm pb-4">
-          Reach out to our team to discuss your business needs or
+        {/* <p className="lg:text-2xl text-sm pb-4">
+          We're here to answer them...
+Connect with "Biz_Name" 
           <br /> earn more about our services.
-        </p>
+        </p> */}
 
         <a
           href="/"
-          style={{ border: "3px solid var(--color-primary)" }}
+          style={{ border: "3px solid ", borderColor: colors.primary,color:colors.primary,borderRadius:"10px" }}
           className={
             "text-primary lg:min-w-[180px]  border-solid font-semibold py-4 lg:px-8 px-5 text-center inline-block bg-white  md:text-2xl text-sm rounded-[10px]"
           }
@@ -36,7 +42,7 @@ export default function Footer({ biz_name }: footer) {
           >
             <path
               d="M2.80006 1.05814L4.73706 0.474141C5.37634 0.281707 6.06379 0.328397 6.67117 0.605501C7.27856 0.882606 7.7644 1.3712 8.03806 1.98014L9.39606 5.00014C9.63176 5.52406 9.69746 6.10865 9.58393 6.67182C9.4704 7.23498 9.18334 7.74846 8.76306 8.14014L6.69606 10.0661C6.41906 10.3291 6.62906 11.3541 7.64106 13.1081C8.65406 14.8631 9.43706 15.5571 9.79806 15.4491L12.5061 14.6211C13.055 14.4532 13.6427 14.4613 14.1868 14.6442C14.7308 14.8272 15.2041 15.1757 15.5401 15.6411L17.4701 18.3161C17.8599 18.8563 18.0404 19.5196 17.978 20.1828C17.9157 20.846 17.6147 21.4641 17.1311 21.9221L15.6391 23.3351C15.1574 23.7913 14.5634 24.1115 13.9176 24.2631C13.2718 24.4147 12.5974 24.3923 11.9631 24.1981C8.83706 23.2411 5.94206 20.4011 3.23906 15.7181C0.530064 11.0281 -0.492936 7.07214 0.220064 3.84014C0.363869 3.18889 0.678754 2.58778 1.13226 2.09877C1.58577 1.60976 2.16148 1.25054 2.80006 1.05814Z"
-              style={{ fill: "var(--color-primary)" }}
+              style={{ fill: colors.primary }}
             />
           </svg>
           Call biz_name
@@ -45,7 +51,9 @@ export default function Footer({ biz_name }: footer) {
 
       <hr />
       <div className="max-w-[1440px] mx-auto px-4 pt-9 ">
-        <div className="max-w-[1200px] mb-9 mx-auto rounded-lg px-7 py-12 bg-tertiary">
+        <div className="max-w-[1200px] mb-9 mx-auto rounded-lg px-7 py-12 bg-tertiary"
+        style={{ background: colors.tertiary }}
+        >
           <div className="flex flex-col lg:flex-row lg:text-left text-center items-center gap-4 justify-between">
             <div className="lg:w-[70%] w-full ">
               <h2 className="font-semibold lg:text-4xl text-2xl mb-4">
@@ -60,7 +68,7 @@ export default function Footer({ biz_name }: footer) {
             <div className="lg:w-[30%] w-full">
               <div className="lg:mt-0 mt-5 text-center">
                 {" "}
-                <Button href="/" className="">
+                <Button colors={colors} href="/" className="">
                   <svg
                     className="inline mr-2"
                     width="24"

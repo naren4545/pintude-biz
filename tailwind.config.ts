@@ -12,11 +12,11 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
      
-          primary: "var(--color-primary)",
-          secondary: "var(--color-secondary)",
-          tertiary: "var(--color-tertiary)",
-          quaternary: "var(--color-quaternary)",
-          buttonHover: "var(--color-buttonHover)",
+          // primary: "var(--color-primary)",
+          // secondary: "var(--color-secondary)",
+          // tertiary: "var(--color-tertiary)",
+          // quaternary: "var(--color-quaternary)",
+          // buttonHover: "var(--color-buttonHover)",
        
       },
     },

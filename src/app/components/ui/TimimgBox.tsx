@@ -12,7 +12,7 @@ const timingsData = [
   { day: "Sunday", workingHours: "Closed", lunchBreak: null },
 ];
 
-export default function TimingBox() {
+export default function TimingBox({colors}:{colors:{primary: string,secondary: string,tertiary: string}}) {
   const [expanded, setExpanded] = useState(false);
 
   // Get current day and corresponding timing
@@ -32,7 +32,7 @@ export default function TimingBox() {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect width="70" height="60" rx="5"  style={{ fill: "var(--color-primary)" }}/>
+          <rect width="70" height="60" rx="5"  style={{ fill: colors.primary}}/>
           <path
             d="M35 46C39.2435 46 43.3131 44.3143 46.3137 41.3137C49.3143 38.3131 51 34.2435 51 30C51 25.7565 49.3143 21.6869 46.3137 18.6863C43.3131 15.6857 39.2435 14 35 14C30.7565 14 26.6869 15.6857 23.6863 18.6863C20.6857 21.6869 19 25.7565 19 30C19 34.2435 20.6857 38.3131 23.6863 41.3137C26.6869 44.3143 30.7565 46 35 46ZM35 10C37.6264 10 40.2272 10.5173 42.6537 11.5224C45.0802 12.5275 47.285 14.0007 49.1421 15.8579C50.9993 17.715 52.4725 19.9198 53.4776 22.3463C54.4827 24.7728 55 27.3736 55 30C55 35.3043 52.8929 40.3914 49.1421 44.1421C45.3914 47.8929 40.3043 50 35 50C23.94 50 15 41 15 30C15 24.6957 17.1071 19.6086 20.8579 15.8579C24.6086 12.1071 29.6957 10 35 10ZM36 20V30.5L45 35.84L43.5 38.3L33 32V20H36Z"
             fill="white"
@@ -42,7 +42,7 @@ export default function TimingBox() {
       </div>
 
       {/* Default view for today's timing */}
-      <div className="flex justify-between pb-3 bg-[#F8F9DE] px-5">
+      <div className="flex justify-between pb-3 bg-[#F8F9DE] px-5" style={{background:  colors.secondary}}>
         <div>
           <p className="text-base font-medium">{todayTiming?.day}</p>
           <p className="text-[10px] lg:text-xs italic text-[#9E9D9D]">Working Hours:</p>
@@ -71,6 +71,7 @@ export default function TimingBox() {
             className={`flex justify-between py-2 px-5 border-b border-gray-200 last:border-none ${
               currentDay === timing.day ? "bg-[#F8F9DE]" : ""
             }`}
+            style={{background:currentDay === timing.day ? colors.secondary :  ""}}
           >
             <div>
               <p className="text-base font-medium">{timing.day}</p>

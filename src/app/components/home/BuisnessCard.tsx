@@ -4,10 +4,16 @@ import Button from "../ui/Button";
 interface BuisnessCardProps {
   digitalBuisnessCard: string;
   onClick: string;
+  colors:{
+    primary: string,
+  secondary: string,
+  tertiary: string,
+  }
 }
 export default function BuisnessCard({
   digitalBuisnessCard,
   onClick,
+  colors
 }: BuisnessCardProps) {
   return (
     <section className="py-10">
@@ -18,14 +24,12 @@ export default function BuisnessCard({
           </div>
           <div className="w-full lg:w-[40%] mt-7 lg:mt-0 lg:text-left text-center">
             <h2 className="font-m lg:text-[40px] font-noto text-2xl font-bold lg:leading-[50px]">
-              Download Your <span className="text-primary">Digital</span>{" "}
-              Business Card
+            Love what this  <span className="text-primary" style={{color:colors.primary}}>business offers?</span>{" "}
+              
             </h2>
 
             <p className="font-m lg:text-2xl text-sm">
-              Make it easy for your customers to save and share your business
-              details. Download a digital version of your business card. Share
-              your digital business card with friends and family.
+            Help them grow by sharing their digital business card with your friends and family.
             </p>
 
             <div>
@@ -34,7 +38,7 @@ export default function BuisnessCard({
             <div className="mt-7">
               <div className="flex lg:justify-normal justify-center items-center gap-12 md:flex-row md:gap-3">
                 <div>
-                  <Button href="/" className=" px-5 lg:min-w-[200px]">
+                  <Button  colors={colors} href="/" className=" px-5 lg:min-w-[200px]">
                     <svg
                       className="inline mr-2 "
                       width="24"
@@ -55,7 +59,7 @@ export default function BuisnessCard({
                 <div>
                   <a
                     href="/"
-                    style={{ border: "1px solid var(--color-primary)" }}
+                    style={{ border: "1px solid", borderColor: colors.primary,color:colors.primary }}
                     className={
                       "text-primary lg:min-w-[180px] border-solid py-4 px-8 text-center inline-block bg-white  md:text-2xl text-sm rounded-[10px]"
                     }
@@ -69,7 +73,7 @@ export default function BuisnessCard({
                     >
                       <path
                         d="M16.6667 22.2222C15.7407 22.2222 14.9537 21.8981 14.3056 21.25C13.6574 20.6019 13.3333 19.8148 13.3333 18.8889C13.3333 18.7778 13.3611 18.5185 13.4167 18.1111L5.61111 13.5556C5.31482 13.8333 4.97222 14.0511 4.58333 14.2089C4.19444 14.3667 3.77778 14.4452 3.33333 14.4444C2.40741 14.4444 1.62037 14.1204 0.972222 13.4722C0.324074 12.8241 0 12.037 0 11.1111C0 10.1852 0.324074 9.39815 0.972222 8.75C1.62037 8.10185 2.40741 7.77778 3.33333 7.77778C3.77778 7.77778 4.19444 7.85667 4.58333 8.01444C4.97222 8.17222 5.31482 8.38963 5.61111 8.66667L13.4167 4.11111C13.3796 3.98148 13.3567 3.85667 13.3478 3.73667C13.3389 3.61667 13.3341 3.48222 13.3333 3.33333C13.3333 2.40741 13.6574 1.62037 14.3056 0.972222C14.9537 0.324074 15.7407 0 16.6667 0C17.5926 0 18.3796 0.324074 19.0278 0.972222C19.6759 1.62037 20 2.40741 20 3.33333C20 4.25926 19.6759 5.0463 19.0278 5.69444C18.3796 6.34259 17.5926 6.66667 16.6667 6.66667C16.2222 6.66667 15.8056 6.58778 15.4167 6.43C15.0278 6.27222 14.6852 6.05481 14.3889 5.77778L6.58333 10.3333C6.62037 10.463 6.6437 10.5881 6.65333 10.7089C6.66296 10.8296 6.66741 10.9637 6.66667 11.1111C6.66593 11.2585 6.66148 11.393 6.65333 11.5144C6.64519 11.6359 6.62185 11.7607 6.58333 11.8889L14.3889 16.4444C14.6852 16.1667 15.0278 15.9493 15.4167 15.7922C15.8056 15.6352 16.2222 15.5563 16.6667 15.5556C17.5926 15.5556 18.3796 15.8796 19.0278 16.5278C19.6759 17.1759 20 17.963 20 18.8889C20 19.8148 19.6759 20.6019 19.0278 21.25C18.3796 21.8981 17.5926 22.2222 16.6667 22.2222Z"
-                        style={{ fill: "var(--color-primary)" }}
+                        style={{ fill: colors.primary }}
                       />
                     </svg>{" "}
                     Share
@@ -78,8 +82,8 @@ export default function BuisnessCard({
               </div>
               <p className="mt-6 text-sm">
                 {" "}
-                Instant access to your digital business card in{" "}
-                <span className="font-bold"> PDF format.</span>
+                Every share counts!{" "}
+               
               </p>
             </div>
           </div>

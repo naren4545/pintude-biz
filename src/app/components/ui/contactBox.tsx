@@ -11,6 +11,7 @@ interface ContactBoxProps {
   Contact: ContactInfo;
   addres: string;
   isOpen: boolean;
+  colors:{primary: string,secondary: string,tertiary: string}
 }
 
 export default function ContactBox({
@@ -18,11 +19,13 @@ export default function ContactBox({
   timing,
   Contact,
   addres,
+  colors,
+
   isOpen,
 }: ContactBoxProps) {
   return (
     <div className=" grid-cols-1 lg:grid-cols-3 gap-8 grid  ">
-     <TimingBox/>
+     <TimingBox colors={colors}/>
       <div className="lg:max-w-[381px]   shadow-[0px_0px_6px_2px_#00000040]  py-3 px-5   rounded-[10px]">
         <div className="flex gap-7 pb-5">
         <svg
@@ -32,7 +35,7 @@ export default function ContactBox({
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <rect width="70" height="60" rx="5"  style={{ fill: "var(--color-primary)" }} />
+          <rect width="70" height="60" rx="5"  style={{ fill: colors.primary }} />
           <path
             fill-rule="evenodd"
             clip-rule="evenodd"
@@ -105,7 +108,7 @@ export default function ContactBox({
       <div className=" lg:max-w-[381px]  py-3  px-5 shadow-[0px_0px_6px_2px_#00000040] rounded-[10px]">
       <div className="flex gap-7 pb-5">
       <svg width="70" height="60" viewBox="0 0 70 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="70" height="60" rx="5"  style={{ fill: "var(--color-primary)" }}/>
+<rect width="70" height="60" rx="5"  style={{ fill: colors.primary }}/>
 <path d="M34.9871 11.5685C34.498 11.5693 34.0269 11.7529 33.6663 12.0833L15.5903 28.0205L15.5735 28.0357C14.9919 28.5737 14.8567 29.4517 15.1495 30.0925C15.4423 30.7333 16.1287 31.1921 16.9071 31.1925H21.5679V46.5957C21.5679 47.6473 22.4831 48.4317 23.4867 48.4321H46.5123C47.5159 48.4321 48.4311 47.6473 48.4311 46.5961V31.1925H53.0923C53.8707 31.1925 54.5571 30.7341 54.8499 30.0929C55.1427 29.4521 55.0075 28.5737 54.4259 28.0357L54.4091 28.0205L36.3331 12.0833C35.966 11.7469 35.485 11.5628 34.9871 11.5685ZM34.9999 21.2833C39.2399 21.2833 42.7131 24.7473 42.7131 28.9749C42.7131 29.9929 42.5103 30.9665 42.1451 31.8581C42.0663 32.0932 41.9679 32.3212 41.8507 32.5397L35.9347 42.6077C35.3099 43.4545 34.8107 43.6409 34.0591 42.6597L28.6951 33.3873C27.7792 32.0982 27.287 30.5562 27.2867 28.9749C27.2867 24.7469 30.7599 21.2829 34.9999 21.2829M34.9999 24.8869C32.7167 24.8869 30.9007 26.6977 30.9007 28.9745C30.9007 31.2513 32.7167 33.0621 34.9999 33.0621C37.2831 33.0621 39.0991 31.2513 39.0991 28.9749C39.0991 26.6981 37.2831 24.8877 34.9999 24.8877" fill="white"/>
 </svg>
 

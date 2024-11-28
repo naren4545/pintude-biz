@@ -13,9 +13,14 @@ interface Brodcast2 {
 
 interface CardCustomProps {
   brodcast: Brodcast2;
+  colors:{
+    primary: string,
+  secondary: string,
+  tertiary: string,
+  }
 }
 
-const CardCustom2: React.FC<CardCustomProps> = ({ brodcast }) => {
+const CardCustom2: React.FC<CardCustomProps> = ({ brodcast ,colors}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCardClick = () => {

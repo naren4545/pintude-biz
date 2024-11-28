@@ -45,8 +45,13 @@ interface HeroSection {
 interface SectionOneProps {
   heroSection: HeroSection;
   contactDetail: ContactDetail;
+  colors:{
+    primary: string,
+  secondary: string,
+  tertiary: string,
+  }
 }
-const SectionOne: React.FC<SectionOneProps> = ({ heroSection, contactDetail }) => {
+const SectionOne: React.FC<SectionOneProps> = ({ heroSection, contactDetail,colors }) => {
   return (
     <section className="shadow-md">
       <div className="max-w-[1440px] relative py-10 px-4  mx-auto ">
@@ -60,6 +65,7 @@ const SectionOne: React.FC<SectionOneProps> = ({ heroSection, contactDetail }) =
           businessInfo={heroSection.businessInfo}
             tags={heroSection.tags}
             onClick={contactDetail.contact.phone}
+            colors={colors}
         />
       
 
@@ -73,6 +79,7 @@ Hawaii 81063"/> */}
           <ContactBox
             weekdays={contactDetail.weekdays}
             timing={contactDetail.timing}
+            colors={colors}
             isOpen={contactDetail.isOpen}
             Contact={contactDetail.contact}
             addres="1901 Thornridge Cir. Shiloh, 

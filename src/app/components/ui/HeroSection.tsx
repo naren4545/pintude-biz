@@ -34,12 +34,12 @@ export default function HeroSection({
   console.log(tags);
   return (
     <div className="grid grid-cols-12 gap-4">
-      <div className="lg:col-span-4 col-span-5  text-center lg:text-left">
+      <div className="lg:col-span-4 col-span-12  text-center lg:text-left">
         <Image src={promoImg} width={500} height={500} className="lg:mx-0 mx-auto" alt="buisness image" />
       </div>
-      <div className="lg:col-span-6 col-span-7 ">
+      <div className="lg:col-span-6 col-span-12 ">
         <div>
-          <h1 className="md:text-5xl font-r pb-6 text-xl font-semibold flex gap-4">
+          <h1   className="md:text-5xl md:leading-[60px] font-r pb-6 text-xl text-overflow font-semibold flex gap-4">
             {businessName }
             <span>
               <svg
@@ -111,7 +111,7 @@ export default function HeroSection({
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row gap-3 max-w-[190px]  mt-7 lg:hidden ">
+        <div className="flex lg:flex-row gap-3  mt-7 lg:hidden ">
           <div style={{ borderColor: colors.primary,color:colors.primary }} className="flex border-primary rounded-lg  border-2 gap-4 p-3 justify-center items-center text-center">
             <svg
               className="w-6"

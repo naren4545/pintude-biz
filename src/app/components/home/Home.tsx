@@ -24,7 +24,7 @@ export default function HomePG() {
 const data={
 
 headerContent:{
-  headerBizContent:"India > Goa > bardez > mapusa > biz_category > biz_name",
+  headerBizContent:"India > Goa > bardez > mapusa > biz_category > biz_subcategory > TheMegaGroceryMartShop",
   onClick:"+91 123 456 7890"
   
 },
@@ -35,7 +35,7 @@ colors:{
 },
 heroSectionData:{
   promoImg:promoImg.src,
-  businessName:"PinTude",
+  businessName:"TheMegaGroceryMartShop",
   Biz_Categor:"Biz_Category",
   Biz_Subcategory:"Biz_Subcategory",
   businessInfo:"PinTude is a powerful app, designed to help businesses reach their local audience effortlessly. The app provides an easy-to-use platform where businesses can showcase their products, services, and special offerings to attract nearby customers. With a focus on fostering community connections, PinTude empowers businesses to grow their visibility and engage directly with customers in their area. Whether you're a small shop or a large multi-location brand, the PinTude app is your gateway to connecting with the people who matter most—your local community",
@@ -213,8 +213,8 @@ brodcast2:{
 }
 
   return (
-    <div>
-      <Header colors={data.colors} headerContent="India>Goa>bardez>mapusa>biz_category>biz_name" onClick={data.headerContent.onClick}/>
+    <div className="overflow-x-hidden">
+      <Header colors={data.colors} headerContent="India>Goa>bardez>mapusa>biz_category>TheMegaGroceryMartShop" onClick={data.headerContent.onClick}/>
       <SectionOne colors={data.colors} heroSection={data.heroSectionData} contactDetail={data.ContactDetails}/>
       <MapUI map={data.MapUIsrc}/>
       <GallerySection images={data.GallerySectionImges}/>

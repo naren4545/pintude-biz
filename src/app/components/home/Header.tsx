@@ -27,7 +27,31 @@ console.log(text_array)
           <div className="flex flex-col lg:flex-row items-center">
             <div className="w-full lg:w-[70%]">
               <div className="logo">
-                <p className={`md:text-2xl lg:mb-0  text-[10px] text-left border-[${colors.primary}] border-b-2   lg:mx-0 md:mb-0  lg:text-left  font-normal w-fit pb-4 `} style={{borderColor:colors.primary}}>{text_array.map((text, index) => <span className={`${index===text_array.length - 1 ? `text-[${colors.primary}] font-medium` : ''} ${index===0?'font-medium':""}`} key={index} style={{color:index===text_array.length -1?colors.primary:""}}>{`${text}${ index !== text_array.length - 1 ? ' > ' : '' }`}</span>)}</p>
+              <p
+  className={`md:text-2xl lg:mb-0 text-[10px] text-left border-[${colors.primary}] border-b-2 lg:mx-0 md:mb-0 lg:text-left font-normal w-fit pb-4`}
+  style={{ borderColor: colors.primary }}
+>
+  {text_array.map((text, index) => (
+    <span
+      className={`${
+        index === text_array.length - 1
+          ? `text-[${colors.primary}] font-medium`
+          : ''
+      } ${index === 0 ? 'font-medium' : ''}`}
+      key={index}
+      style={{
+        color: index === text_array.length - 1 ? colors.primary : '',
+      }}
+    >
+      {/* Display only the first 12 characters for the last element */}
+      {index === text_array.length - 1
+        ? text.length > 12
+          ? `${text.slice(0, 12)}...`  // Slice the text and add "..."
+          : text
+        : `${text}${index !== text_array.length - 1 ? ' > ' : ''}`}
+    </span>
+  ))}
+</p>
               </div>
             </div>
             {/* <div className="w-full lg:w-[30%]">
